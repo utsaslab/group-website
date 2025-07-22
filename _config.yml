@@ -89,7 +89,7 @@ scholar:
 exclude:
   - Gemfile
   - Gemfile.lock
-  - update_boostrap.sh
+  - update_bootstrap.sh
   - switch_theme.sh
   - tags
   - Rakefile
