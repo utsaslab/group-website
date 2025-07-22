@@ -1,24 +1,9 @@
-- name: Student Here
-  location: Univesity Here
-  degree: Ph.D. 
-  year: 2022
+- name: Hayley LeBlanc
+  location: UT Austin
+  degree: Ph.D.
+  year: 2025
 
-- name: Student Here
-  location: Univesity Here
-  degree: Ph.D. 
-  year: 2021
-
-- name: Student Here
-  location: Univesity Here
-  degree: Ph.D. 
-  year: 2020
-
-- name: Student Here
-  location: Univesity Here
-  degree: M.S.
-  year: 2020
-
-- name: Student Here
-  location: Univesity Here
-  degree: B.S.
-  year: 2020
+- name: Yeonju Ro
+  location: UT Austin
+  degree: Ph.D.
+  year: 2026

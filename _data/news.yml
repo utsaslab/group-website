@@ -1,6 +1,21 @@
-- date: 1 January, 1941
-  headline: "Example news here"
+- date: Aug 2023
+  headline: "UTCS and the Daily Texan covered our work on Chipmunk."
 
-- date: 1 January, 1940
-  headline: "Example news here"
+- date: Aug 2023
+  headline: "Returned from sabbatical and back to teaching at UT."
+
+- date: Mar 2023
+  headline: "Published a book, The CS Assistant Professor Handbook."
+
+- date: Aug 2022
+  headline: "On sabbatical at VMware Research in Fall 22 and EPFL in Spring 23."
+
+- date: Sep 2021
+  headline: "Serving as general co-chair for SOSP 21."
+
+- date: Mar 2021
+  headline: "Co-founded the open-access Journal of Systems Research."
+
+- date: Jan 2021
+  headline: "Student SeKwon Lee awarded the Microsoft Research PhD Fellowship."
 

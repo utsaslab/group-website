@@ -1,8 +1,10 @@
 - image: NSF.png
   url: https://www.nsf.gov/
-- image: doe_logo.png
-  url: https://www.energy.gov/
-- image: onr_logo.png
-  url: https://www.onr.navy.mil/
-- image: NIH-logo.png
-  url: https://www.nih.gov/
+- image: rock.jpg
+  url: https://www.bighpc.org/
+- image: rock.jpg
+  url: https://www.vmware.com/
+- image: rock.jpg
+  url: https://www.google.com/
+- image: rock.jpg
+  url: https://about.meta.com/
