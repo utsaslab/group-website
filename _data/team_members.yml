@@ -1,9 +1,7 @@
-- name: Example student name
+- name: Hayley LeBlanc
   photo: rock.jpg
-  info: Postdoc, started Oct 2040
-  email: exampleemail@gmail.com
-  website: https://website.com
+  info: PhD Student
 
-- name: "This could be you !"
+- name: Yeonju Ro
   photo: rock.jpg
-  info: See <a href="www">openings</a> for more info
+  info: PhD Student

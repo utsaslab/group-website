@@ -1,5 +1,64 @@
-- name: Example Alumni Name
+- name: Se Kwon Lee
   photo: rock.jpg
-  duration: In the lab 2015-18
-  info: Now at Univeristy of X
-  email: exampleemail@gmail.com
+  duration: PhD
+  info: HP Labs
+
+- name: Soujanya Ponnapalli
+  photo: rock.jpg
+  duration: PhD
+  info: Postdoc at UC Berkeley
+
+- name: Aashaka Shah
+  photo: rock.jpg
+  duration: PhD
+  info: Microsoft Research Redmond
+
+- name: Rohan Kadekodi
+  photo: rock.jpg
+  duration: PhD
+  info: Postdoc at UWashington Seattle
+
+- name: Sangamithra Goutam
+  photo: rock.jpg
+  duration: Masters
+  info: TACC
+
+- name: Om Saran
+  photo: rock.jpg
+  duration: Masters
+  info: Apple
+
+- name: Jayashree Mohan
+  photo: rock.jpg
+  duration: PhD
+  info: Microsoft Research India
+
+- name: Yige Hu
+  photo: rock.jpg
+  duration: PhD (co-advised)
+  info: Katana Graph
+
+- name: Supreeth Shastri
+  photo: rock.jpg
+  duration: Post-doc
+  info: UIowa CS
+
+- name: Ashlie Martinez
+  photo: rock.jpg
+  duration: Undergraduate
+  info: UWashington-Seattle
+
+- name: Dhathri Purohith
+  photo: rock.jpg
+  duration: Masters
+  info: Nutanix
+
+- name: Pandian Raju
+  photo: rock.jpg
+  duration: Masters
+  info: Rubrik
+
+- name: Tianyu Cheng
+  photo: rock.jpg
+  duration: Masters
+  info: Apple

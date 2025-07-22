@@ -34,8 +34,27 @@ iframe {
 
 <div class="jumbotron">
 <div class="col-md-12 col-sm-12">
-<h4>Example Research</h4>
+My group aims to help build the next generation of storage systems. We design
+systems that offer high performance and strong reliability, and we release all
+our software as open source.
 
-Example description
+<h4>Recent major projects</h4>
+<ul>
+  <li>LiPT &ndash; framework to speed up ML training by focusing on crucial data
+  items (ICML&nbsp;23).</li>
+  <li>Chipmunk &ndash; testing persistent-memory file system recovery (EuroSys&nbsp;23).</li>
+  <li>Dinomo &ndash; key-value store for disaggregated persistent memory (VLDB&nbsp;23).</li>
+  <li>WineFS &ndash; persistent-memory file system that stays fast as it ages (SOSP&nbsp;21).</li>
+  <li>RainBlock &ndash; IO-efficient public blockchain (ATC&nbsp;21).</li>
+  <li>MONet &ndash; reducing memory usage of DNN training (ICLR&nbsp;21).</li>
+  <li>SplitFS &ndash; low-overhead file system for persistent memory (SOSP&nbsp;19).</li>
+  <li>RECIPE &ndash; concurrent, crash-consistent indexes (SOSP&nbsp;19).</li>
+</ul>
+
+<h4>Current projects</h4>
+<ul>
+  <li>Building a persistent-memory file system in Rust (Hayley LeBlanc)</li>
+  <li>Making distributed training of ML models more efficient (Yeonju Ro)</li>
+</ul>
 </div>
 </div>

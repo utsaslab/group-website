@@ -7,6 +7,9 @@ permalink: /teaching/
 
 ## Teaching
 
-* Introduction to Physics (1961--63) [Textbook here!](https://www.feynmanlectures.caltech.edu/)
+* Spring 2024: Virtualization (CS&nbsp;360V), Advanced OS (MSCS), Financial Literacy for CS students
+* Fall 2023: Distributed Systems (CS&nbsp;380D) on campus, Virtualization Online Masters course
+
+[Full Teaching List](#)
 
 

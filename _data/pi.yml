@@ -1,17 +1,17 @@
-- name: Dr. Richard Feynman
+- name: Vijay Chidambaram
   photo: headshot.jpg
-  info: Richard C. Tolman Professor, California Institute of Technology
-  email: richard@university.edu
+  info: Associate Professor, Department of Computer Science, UT Austin
+  email: vijayc@utexas.edu
   github: https://github.com/
   researchgate: https://www.researchgate.net/
-  scholar: https://scholar.google.com/citations?user=B7vSqZsAAAAJ
+  scholar: https://scholar.google.com/citations?user=
   cv: cv/cv.pdf
   # Change the items in "education" you have (up to 6)
   education:
     [
-      "(1942) Ph.D. Physics, Princeton University",
-      "(1939) B.S. Physics, Massachusetts Institute of Technology",
+      "Ph.D. Computer Science, University of Wisconsin-Madison",
+      "B.Tech. Computer Science",
     ]
 
   educationshort:
-    ["(1942) Ph.D. Physics, Princeton", "(1939) B.S. Physics, MIT"]
+    ["Ph.D. University of Wisconsin-Madison", "B.Tech. Computer Science"]
