@@ -62,3 +62,8 @@
   photo: rock.jpg
   duration: Masters
   info: Apple
+
+- name: Hayley LeBlanc
+  photo: rock.jpg
+  duration: PhD
+  info: Microsoft Research

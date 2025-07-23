@@ -53,8 +53,8 @@ our software as open source.
 
 <h4>Current projects</h4>
 <ul>
-  <li>Building a persistent-memory file system in Rust (Hayley LeBlanc)</li>
-  <li>Making distributed training of ML models more efficient (Yeonju Ro)</li>
+  <li>Building a persistent-memory file system in Rust.</li>
+  <li>Making distributed training of ML models more efficient.</li>
 </ul>
 </div>
 </div>
