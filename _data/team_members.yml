@@ -1,7 +1,19 @@
-- name: Hayley LeBlanc
+- name: Minh Phan
   photo: rock.jpg
   info: PhD Student
+  website: https://minhphan8803.github.io
 
-- name: Yeonju Ro
+- name: Talia Chen
   photo: rock.jpg
   info: PhD Student
+  website: https://www.linkedin.com/in/qixuanchen/
+
+- name: Nitin Mathai
+  photo: rock.jpg
+  info: PhD Student
+  website: https://www.linkedin.com/in/nitinmathai/
+
+- name: Shurang Wu
+  photo: rock.jpg
+  info: PhD Student
+  website: https://odeinjul.github.io/
