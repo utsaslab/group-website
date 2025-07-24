@@ -27,3 +27,4 @@ Research group out at lunch in 2018!
 I am an Associate Professor in the Department of Computer Science at the
 University of Texas at Austin. My research focuses on building storage systems
 that combine high performance with strong reliability guarantees.
+I completed my B.Tech degree at the College of Engineering, Guindy (CEG).
