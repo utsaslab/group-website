@@ -2,10 +2,9 @@
   photo: headshot.jpg
   info: Associate Professor, Department of Computer Science, UT Austin
   email: vijayc@utexas.edu
-  github: https://github.com/
-  researchgate: https://www.researchgate.net/
-  scholar: https://scholar.google.com/citations?user=
-  cv: cv/cv.pdf
+  github: https://github.com/vijay03
+  twitter: vijay_ut
+  scholar: https://scholar.google.com/citations?hl=en&user=sbbRtWwAAAAJ
   # Change the items in "education" you have (up to 6)
   education:
     [
