@@ -36,9 +36,19 @@ GROUP BY ?name ?affiliation ?pers
 ORDER BY DESC(?freq)
 LIMIT 100`;
 
-  const url = 'https://dblp.org/sparql?query=' + encodeURIComponent(query) + '&format=json';
+  // DBLP's SPARQL endpoint does not set CORS headers, so direct requests from
+  // the browser fail. Use a public CORS proxy. The proxy only forwards the
+  // request, so we must POST the query and explicitly request JSON results.
+  const url = 'https://cors.isomorphic-git.org/https://dblp.org/sparql';
   try {
-    const res = await fetch(url);
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        Accept: 'application/sparql-results+json'
+      },
+      body: 'query=' + encodeURIComponent(query)
+    });
     const json = await res.json();
     const rows = json.results.bindings;
     const table = document.getElementById('authors-table');
