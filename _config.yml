@@ -35,7 +35,7 @@ nav_pages:
   - name: team
   - name: teaching
   - name: blogs
-  - name: sosp-osdi-authors
+  - name: sosp-osdi-hof
 
 include:
   - .htaccess
