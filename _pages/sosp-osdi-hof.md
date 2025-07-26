@@ -7,9 +7,9 @@ permalink: /sosp-osdi-hof/
 
 ### Systems Research: SOSP/OSDI Hall of Fame
 
-Authors are ranked by total number of SOSP and OSDI papers (the top conferences for systems research). Authors with same number of papers have the same rank.
+Authors are ranked by total number of SOSP and OSDI papers (the top conferences for systems research). Several authors can share the same rank and the next rank is incremented by one.
 
-For display purposes, within each rank, authors are sorted by last name. Top 100 (approximately) authors are shown.
+For display purposes, authors sharing the same rank are sorted by last name. Top 100 (approximately) authors are shown.
 
 Disclaimers: A real Hall of Fame should be determined by impact, not paper count.
 Data pulled from [DBLP](https://dblp.org) using SPARQL.
@@ -34,16 +34,12 @@ Reflects data up-to OSDI 25.
   </thead>
   <tbody>
     {% assign author_info = site.data["hof-authors"] %}
-    {% assign authors = site.data.hof | sort: 'freq' | reverse %}
-    {% assign last_freq = '' %}
+    {% assign authors_by_name = site.data.hof | sort: 'last' %}
+    {% assign groups = authors_by_name | group_by: 'freq' | sort: 'name' | reverse %}
     {% assign rank = 0 %}
-    {% assign index = 0 %}
-    {% for author in authors %}
-      {% assign index = index | plus: 1 %}
-      {% if author.freq != last_freq %}
-        {% assign rank = index %}
-        {% assign last_freq = author.freq %}
-      {% endif %}
+    {% for group in groups %}
+      {% assign rank = rank | plus: 1 %}
+      {% for author in group.items %}
         {% assign affiliation = "" %}
         {% for info in author_info %}
           {% if info.name == author.name %}
@@ -51,12 +47,13 @@ Reflects data up-to OSDI 25.
             {% break %}
           {% endif %}
         {% endfor %}
-      <tr>
-        <td>{{ rank }}</td>
-        <td><a href="{{ author.dblp }}">{{ author.name }}</a></td>
-        <td>{{ affiliation }}</td>
-        <td>{{ author.freq }}</td>
-      </tr>
+        <tr>
+          <td>{{ rank }}</td>
+          <td><a href="{{ author.dblp }}">{{ author.name }}</a></td>
+          <td>{{ affiliation }}</td>
+          <td>{{ author.freq }}</td>
+        </tr>
+      {% endfor %}
     {% endfor %}
   </tbody>
 </table>
