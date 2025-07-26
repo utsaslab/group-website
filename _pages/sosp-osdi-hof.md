@@ -9,7 +9,7 @@ permalink: /sosp-osdi-hof/
 
 Authors are ranked by total number of SOSP and OSDI papers (the top conferences for systems research). Several authors can share the same rank and the next rank is incremented by one.
 
-For display purposes, authors sharing the same rank are sorted by last name. Top 100 (approximately) authors are shown.
+For display purposes, authors sharing the same rank are sorted by last name. The list shows the top 100 authors and includes anyone tied with the last ranked author.
 
 Disclaimers: A real Hall of Fame should be determined by impact, not paper count.
 Data pulled from [DBLP](https://dblp.org) using SPARQL.
@@ -34,7 +34,16 @@ Reflects data up-to OSDI 25.
   </thead>
   <tbody>
     {% assign author_info = site.data["hof-authors"] %}
-    {% assign authors_by_name = site.data.hof | sort: 'last' %}
+    {% assign authors_sorted = site.data.hof | sort: 'freq' | reverse %}
+    {% assign total_authors = authors_sorted | size %}
+    {% if total_authors > 100 %}
+      {% assign cutoff_freq = authors_sorted[99].freq | plus: 0 %}
+    {% else %}
+      {% assign last_author = authors_sorted | last %}
+      {% assign cutoff_freq = last_author.freq | plus: 0 %}
+    {% endif %}
+    {% assign authors_filtered = authors_sorted | where_exp: 'a', 'a.freq >= cutoff_freq' %}
+    {% assign authors_by_name = authors_filtered | sort: 'last' %}
     {% assign groups = authors_by_name | group_by: 'freq' | sort: 'name' | reverse %}
     {% assign rank = 0 %}
     {% for group in groups %}
