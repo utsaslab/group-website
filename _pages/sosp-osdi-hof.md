@@ -1,11 +1,27 @@
 ---
-title: "Systems Hall of Fame"
+title: "SOSP/OSDI Hall of Fame"
 layout: gridlay
 sitemap: false
 permalink: /sosp-osdi-hof/
 ---
 
-This page lists authors with the most publications in SOSP and OSDI using data from [DBLP](https://dblp.org).
+### Systems Research: SOSP/OSDI Hall of Fame
+
+Authors are ranked by total number of SOSP and OSDI papers (the top conferences for systems research). Authors with same number of papers have the same rank.
+
+For display purposes, within each rank, authors are sorted by last name. Top 100 (approximately) authors are shown.
+
+Disclaimers: A real Hall of Fame should be determined by impact, not paper count.
+Data pulled from [DBLP](https://dblp.org) using SPARQL.
+Please direct all queries about data to DBLP.
+
+Author information updated manually. Please let me know if there is a mistake.
+
+Inspired by [ISCA Hall of Fame](http://pages.cs.wisc.edu/~arch/www/iscabibhall.html) and [MICRO Hall of Fame](http://newsletter.sigmicro.org/micro-hof.txt/view).
+
+Updated: July 2025.
+
+Reflects data up-to OSDI 25.
 
 <table class="table table-striped">
   <thead>
