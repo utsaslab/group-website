@@ -36,14 +36,7 @@ Reflects data up-to OSDI 25.
     {% assign author_info = site.data["hof-authors"] %}
     {% assign authors_sorted = site.data.hof | sort: 'freq' | reverse %}
     {% assign total_authors = authors_sorted | size %}
-    {% if total_authors > 100 %}
-      {% assign cutoff_freq = authors_sorted[99].freq | plus: 0 %}
-    {% else %}
-      {% assign last_author = authors_sorted | last %}
-      {% assign cutoff_freq = last_author.freq | plus: 0 %}
-    {% endif %}
-    {% assign authors_filtered = authors_sorted | where_exp: 'a', 'a.freq >= cutoff_freq' %}
-    {% assign authors_by_name = authors_filtered | sort: 'last' %}
+    {% assign authors_by_name = authors_sorted | sort: 'last' %}
     {% assign groups = authors_by_name | group_by: 'freq' | sort: 'name' | reverse %}
     {% assign rank = 0 %}
     {% for group in groups %}
