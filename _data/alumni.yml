@@ -1,3 +1,8 @@
+- name: Hayley LeBlanc
+  photo: rock.jpg
+  duration: PhD
+  info: Microsoft Research
+
 - name: Se Kwon Lee
   photo: rock.jpg
   duration: PhD
@@ -63,7 +68,3 @@
   duration: Masters
   info: Apple
 
-- name: Hayley LeBlanc
-  photo: rock.jpg
-  duration: PhD
-  info: Microsoft Research
