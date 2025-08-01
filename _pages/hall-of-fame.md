@@ -2,7 +2,8 @@
 title: "SOSP/OSDI Hall of Fame"
 layout: gridlay
 sitemap: false
-permalink: /sosp-osdi-hof/
+permalink: /hall-of-fame/
+nav: true
 ---
 
 ### Systems Research: SOSP/OSDI Hall of Fame
