@@ -1,0 +1,63 @@
+#!/usr/bin/env python3
+"""Update Hall of Fame data from DBLP SPARQL endpoint."""
+
+import csv
+import requests
+
+QUERY = """\
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?name ?affiliation (COUNT(DISTINCT ?publ) as ?freq) (?pers as ?dblp) (SAMPLE(?orcids) as ?orcid) WHERE {
+  VALUES ?stream { <https://dblp.org/streams/conf/sosp> <https://dblp.org/streams/conf/osdi> } .
+  ?publ dblp:publishedInStream ?stream .
+  ?publ dblp:authoredBy ?pers .
+  ?pers rdfs:label ?name .
+  OPTIONAL { ?pers dblp:primaryAffiliation ?affiliation . }
+  OPTIONAL { ?pers dblp:orcid ?orcids . }
+}
+GROUP BY ?name ?affiliation ?pers
+ORDER BY DESC(?freq)
+LIMIT 120
+"""
+
+ENDPOINT = "https://dblp.org/sparql"
+OUTPUT_FILE = "_data/hof.csv"
+
+
+def main():
+    try:
+        resp = requests.get(ENDPOINT, params={"query": QUERY, "format": "csv"})
+        resp.raise_for_status()
+    except Exception as exc:
+        raise SystemExit(f"Failed to fetch data: {exc}")
+
+    lines = resp.text.splitlines()
+    reader = csv.DictReader(lines)
+    rows = list(reader)
+
+    for row in rows:
+        row["freq"] = int(row.get("freq", 0))
+        # compute last name for sorting later
+        row["last"] = row["name"].split()[-1]
+
+    if rows:
+        cutoff = rows[99]["freq"] if len(rows) >= 100 else rows[-1]["freq"]
+    else:
+        cutoff = 0
+
+    filtered = [r for r in rows if r["freq"] >= cutoff]
+
+    fieldnames = reader.fieldnames + ["last"] if "last" not in reader.fieldnames else reader.fieldnames
+
+    with open(OUTPUT_FILE, "w", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        for row in filtered:
+            writer.writerow(row)
+
+    print(f"Wrote {len(filtered)} authors to {OUTPUT_FILE} (cutoff {cutoff})")
+
+
+if __name__ == "__main__":
+    main()
+
