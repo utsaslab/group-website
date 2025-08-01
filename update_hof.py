@@ -2,7 +2,9 @@
 """Update Hall of Fame data from DBLP SPARQL endpoint."""
 
 import csv
-import requests
+from urllib.error import HTTPError
+from urllib.parse import urlencode
+from urllib.request import Request, urlopen
 
 QUERY = """\
 PREFIX dblp: <https://dblp.org/rdf/schema#>
@@ -20,18 +22,23 @@ ORDER BY DESC(?freq)
 LIMIT 120
 """
 
-ENDPOINT = "https://dblp.org/sparql"
+ENDPOINT = "https://dblp.org/sparql/"
 OUTPUT_FILE = "_data/hof.csv"
 
 
 def main():
+    params = urlencode({"query": QUERY, "format": "csv"})
+    url = f"{ENDPOINT}?{params}"
+    req = Request(url, headers={"Accept": "text/csv"})
     try:
-        resp = requests.get(ENDPOINT, params={"query": QUERY, "format": "csv"})
-        resp.raise_for_status()
+        with urlopen(req) as resp:
+            content = resp.read().decode("utf-8")
+    except HTTPError as exc:
+        raise SystemExit(f"Failed to fetch data: {exc}")
     except Exception as exc:
         raise SystemExit(f"Failed to fetch data: {exc}")
 
-    lines = resp.text.splitlines()
+    lines = content.splitlines()
     reader = csv.DictReader(lines)
     rows = list(reader)
 
@@ -57,7 +64,4 @@ def main():
 
     print(f"Wrote {len(filtered)} authors to {OUTPUT_FILE} (cutoff {cutoff})")
 
-
-if __name__ == "__main__":
-    main()
 
