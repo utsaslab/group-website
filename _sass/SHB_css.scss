@@ -19,6 +19,30 @@ img {
     margin-bottom: 5px;
 }
 
+/* Purple media buttons for audio and video links */
+.btn-media {
+    color: #fff;
+    background-color: #6f42c1;
+    border-color: #6f42c1;
+}
+
+.btn-media:hover,
+.btn-media:focus,
+.btn-media:active,
+.btn-media.active,
+.show > .btn-media.dropdown-toggle {
+    color: #fff;
+    background-color: darken(#6f42c1, 7.5%);
+    border-color: darken(#6f42c1, 10%);
+}
+
+.btn-media:disabled,
+.btn-media.disabled {
+    color: #fff;
+    background-color: #6f42c1;
+    border-color: #6f42c1;
+}
+
 .container-fluid {
   max-width: 800px;
 }
