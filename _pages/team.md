@@ -119,4 +119,4 @@ permalink: /team/
 
 ## Administrative Support
 
-<a href="canderss@cs.utexas.edu">Catherine Andersson</a> is helping us (and other groups) with administration.
+<a href="mailto:canderss@cs.utexas.edu">Catherine Andersson</a> is helping us (and other groups) with administration.

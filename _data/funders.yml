@@ -1,10 +1,10 @@
 - image: NSF.png
   url: https://www.nsf.gov/
-- image: rock.jpg
-  url: https://www.bighpc.org/
-- image: rock.jpg
+- image: vmware.svg
   url: https://www.vmware.com/
-- image: rock.jpg
+- image: google.png
   url: https://www.google.com/
-- image: rock.jpg
+- image: meta.png
   url: https://about.meta.com/
+- image: toyota.png
+  url: https://www.toyota.com/
