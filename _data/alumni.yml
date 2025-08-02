@@ -1,70 +1,83 @@
 - name: Hayley LeBlanc
-  photo: rock.jpg
+  photo: hayley.jpg
   duration: PhD
   info: Microsoft Research
+  website: https://www.microsoft.com/en-us/research/people/hleblanc/
 
 - name: Se Kwon Lee
-  photo: rock.jpg
+  photo: sekwon.jpg
   duration: PhD
   info: HP Labs
+  website: https://sekwonlee.github.io
 
 - name: Soujanya Ponnapalli
-  photo: rock.jpg
+  photo: soujanya.jpg
   duration: PhD
   info: Postdoc at UC Berkeley
+  website: https://soujanyaponnapalli.github.io
 
 - name: Aashaka Shah
-  photo: rock.jpg
+  photo: aashaka.png
   duration: PhD
   info: Microsoft Research Redmond
+  website: https://aashaka.github.io
 
 - name: Rohan Kadekodi
-  photo: rock.jpg
+  photo: rohan.jpeg
   duration: PhD
   info: Postdoc at UWashington Seattle
+  website: https://www.linkedin.com/in/rohan-kadekodi-775b4a124/
 
 - name: Sangamithra Goutam
-  photo: rock.jpg
+  photo: sangamithra.jpeg
   duration: Masters
   info: TACC
+  website: https://www.linkedin.com/in/sangamithragoutham/
 
 - name: Om Saran
-  photo: rock.jpg
+  photo: om.jpeg
   duration: Masters
   info: Apple
+  website: https://www.linkedin.com/in/omsarankre/
 
 - name: Jayashree Mohan
-  photo: rock.jpg
+  photo: jayashree.jpg
   duration: PhD
   info: Microsoft Research India
+  website: https://www.microsoft.com/en-us/research/people/jamohan/
 
 - name: Yige Hu
-  photo: rock.jpg
+  photo: yige.jpeg
   duration: PhD (co-advised)
   info: Katana Graph
+  website: https://www.linkedin.com/in/yige-hu-196a4a26b/
 
 - name: Supreeth Shastri
-  photo: rock.jpg
+  photo: supreeth.jpg
   duration: Post-doc
   info: UIowa CS
+  website: https://lawfulcomputing.org/shastri.htm
 
 - name: Ashlie Martinez
-  photo: rock.jpg
+  photo: ashlie.jpeg
   duration: Undergraduate
   info: UWashington-Seattle
+  website: https://www.linkedin.com/in/ashlie-martinez/
 
 - name: Dhathri Purohith
-  photo: rock.jpg
+  photo: dhathri.jpeg
   duration: Masters
   info: Nutanix
+  website: https://www.linkedin.com/in/dhathri-purohith/
 
 - name: Pandian Raju
-  photo: rock.jpg
+  photo: pandian.jpeg
   duration: Masters
   info: Rubrik
+  website: https://www.linkedin.com/in/pandianraju/
 
 - name: Tianyu Cheng
-  photo: rock.jpg
+  photo: tianyu.jpeg
   duration: Masters
   info: Apple
-
+  website: https://www.linkedin.com/in/tianyu-cheng-83433566/
