@@ -23,7 +23,7 @@ pre{
 </style>
 
 
-<div class="text-justify">{{reference}}</div>
+<div class="text-justify">{{ reference | unescape_tilde }}</div>
 
 <!-- You can use the below to make your name bold -->
 <!-- {{reference | replace_first: 'Bryngelson, S. H.', '<b>Bryngelson, S. H.</b>' | replace_first: 'Bryngelson, S.', '<b>Bryngelson, S.</b>' }}</div> -->
@@ -39,27 +39,27 @@ pre{
 {% endif %}
 
 {% if entry.pdf %}
-<a href="{{ entry.pdf }}" target="_blank"><button class="btn btn-success btm-sm">PDF</button></a>
+<a href="{{ entry.pdf | unescape_tilde }}" target="_blank"><button class="btn btn-success btm-sm">PDF</button></a>
 {% elsif bibtest %}
 <a href="{{ site.url }}{{ site.baseurl }}/papers/{{ entry.file }}" target="_blank"><button class="btn btn-success btm-sm">PDF</button></a>
 {% endif %}
 
 {% if entry.doi %}
 {% if entry.type == 'unpublished' %}
-<a href="{{ entry.doi | prepend: 'https://arxiv.org/abs/' }}" target="_blank"><button class="btn btn-primary btm-sm">ARXIV</button></a>
+<a href="{{ entry.doi | prepend: 'https://arxiv.org/abs/' | unescape_tilde }}" target="_blank"><button class="btn btn-primary btm-sm">ARXIV</button></a>
 {% else %}
-<a href="{{ entry.doi | prepend: 'http://doi.org/' }}" target="_blank"><button class="btn btn-primary btm-sm">DOI</button></a>
+<a href="{{ entry.doi | prepend: 'http://doi.org/' | unescape_tilde }}" target="_blank"><button class="btn btn-primary btm-sm">DOI</button></a>
 {% endif %}
 {% endif %}
 
 {% if entry.slides %}
-<a href="{{ entry.slides }}" target="_blank"><button class="btn btn-info btm-sm">SLIDES</button></a>
+<a href="{{ entry.slides | unescape_tilde }}" target="_blank"><button class="btn btn-info btm-sm">SLIDES</button></a>
 {% endif %}
 {% if entry.video %}
-<a href="{{ entry.video }}" target="_blank"><button class="btn btn-media btm-sm">VIDEO</button></a>
+<a href="{{ entry.video | unescape_tilde }}" target="_blank"><button class="btn btn-media btm-sm">VIDEO</button></a>
 {% endif %}
 {% if entry.audio %}
-<a href="{{ entry.audio }}" target="_blank"><button class="btn btn-media btm-sm">AUDIO</button></a>
+<a href="{{ entry.audio | unescape_tilde }}" target="_blank"><button class="btn btn-media btm-sm">AUDIO</button></a>
 {% endif %}
 
 {% if entry.type == 'unpublished' or entry.type == 'article' or  entry.type == 'thesis' or entry.type == 'inproceedings' or entry.type == 'report' %}
@@ -72,16 +72,16 @@ pre{
 
 {% if entry.abstract %}
 <div id="a{{entry.key}}" style="display: none; background-color:black; border-radius:5px; padding:10px; margin-bottom:20px;">
-<pre>{{ entry.bibtex | remove: "entry.abstract" }}</pre>
+<pre>{{ entry.bibtex | unescape_tilde | remove: "entry.abstract" }}</pre>
 </div>
 {% else %}
 <div id="a{{entry.key}}" style="display: none; background-color:black; border-radius:5px; padding:10px; margin-bottom:20px;">
-<pre>{{ entry.bibtex }}</pre>
+<pre>{{ entry.bibtex | unescape_tilde }}</pre>
 </div>
 {% endif %}
 
 <div id="b{{entry.key}}" style="display: none; background-color:black; border-radius:5px; padding:10px; margin-bottom:20px;">
-<pre>{{entry.abstract}}</pre>
+<pre>{{ entry.abstract }}</pre>
 </div>
 
 <script>
