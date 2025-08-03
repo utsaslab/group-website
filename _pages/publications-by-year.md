@@ -6,6 +6,7 @@ permalink: /publications-by-year/
 years: [2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016]
 ---
 
+<div markdown="0">
 {% for y in page.years %}
 <details class="year-details">
   <summary class="year-heading">{{ y }}</summary>
@@ -15,3 +16,4 @@ years: [2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016]
 </details>
 {% endfor %}
 <script src="{{ '/assets/javascript/publications-by-year.js' | relative_url }}"></script>
+</div>
