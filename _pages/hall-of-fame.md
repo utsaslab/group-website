@@ -63,6 +63,8 @@ Reflects data up-to OSDI 25.
 
 ### Top Institutions
 
+This table lists groups authors in the above table by institution and displays the top 10 institutions. 
+
 <table class="table table-striped">
   <thead>
     <tr>
