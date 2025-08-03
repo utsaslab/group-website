@@ -11,3 +11,11 @@ $baseurl: "{{ site.url }}{{ site.baseurl }}";
 // @import "bootstrap_customization";
 @import "bootstrap";
 @import "SHB_css";
+
+summary.year-heading {
+  font-size: 1.25rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
