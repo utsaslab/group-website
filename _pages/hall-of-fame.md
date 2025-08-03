@@ -61,3 +61,25 @@ Reflects data up-to OSDI 25.
   </tbody>
 </table>
 
+### Top Institutions
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Institution</th>
+      <th>Authors</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% assign author_info = site.data["hof-authors"] %}
+    {% assign affiliation_groups = author_info | where_exp: "item", "item.affiliation != ''" | group_by: "affiliation" | sort: "size" | reverse %}
+    {% assign top_affiliations = affiliation_groups | slice: 0, 10 %}
+    {% for group in top_affiliations %}
+      <tr>
+        <td>{{ group.name }}</td>
+        <td>{{ group.size }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
