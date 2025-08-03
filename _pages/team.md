@@ -116,6 +116,39 @@ permalink: /team/
 {% endif %}
 </div>
 
-## Administrative Support
+## Staff
 
-<a href="mailto:canderss@cs.utexas.edu">Catherine Andersson</a> is helping us (and other groups) with administration.
+<div class="jumbotron">
+{% assign number_printed = 0 %}
+{% for member in site.data.staff %}
+
+{% assign even_odd = number_printed | modulo: 2 %}
+
+{% if even_odd == 0 %}
+
+<div class="row">
+{% endif %}
+
+<div class="col-sm-2">
+<img src="{{ site.url }}{{ site.baseurl }}/images/{{ member.photo }}" width="100%" style="max-width:250px"/>
+</div>
+<div class="col-sm-4 col-xs-12">
+  <h4>{% if member.website %}<a href="{{ member.website }}" target="_blank">{{ member.name }}</a>{% else %}{{ member.name }}{% endif %}</h4>
+  <i>{{ member.info }}<br></i>
+</div>
+
+{% assign number_printed = number_printed | plus: 1 %}
+
+{% if even_odd == 1 %}
+
+</div>
+{% endif %}
+{% endfor %}
+
+{% assign even_odd = number_printed | modulo: 2 %}
+{% if even_odd == 1 %}
+
+</div>
+{% endif %}
+</div>
+
