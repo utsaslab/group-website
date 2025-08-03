@@ -24,13 +24,14 @@ pre{
 
 
 <div class="text-justify">
-  <strong>{{ entry.title | unescape_tilde }}</strong><br/>
-  {% if entry.author %}
-    {% for author in entry.author %}
+  <strong>{{ entry.title | unescape_tilde }}</strong>
+  {% if entry.author_array %}
+    <br/>
+    {% for author in entry.author_array %}
       {{ author.first }} {{ author.last }}{% unless forloop.last %}, {% endunless %}
     {% endfor %}
-    <br/>
   {% endif %}
+  <br/>
   {% if entry.booktitle %}
     <em>{{ entry.booktitle | unescape_tilde }}</em>
   {% elsif entry.journal %}
