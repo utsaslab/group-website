@@ -5,7 +5,7 @@ sitemap: false
 permalink: /publications/
 years: [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]
 ---
-[Publications by year](/publications-by-year/)
+[Publications by year]({{ site.url }}{{ site.baseurl }}/publications-by-year/)
 
 <style>
 .jumbotron{
