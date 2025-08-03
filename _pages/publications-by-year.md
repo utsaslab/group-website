@@ -16,8 +16,18 @@ summary.year-heading {
 </style>
 
 {% for y in page.years %}
-<details>
+<details class="year-details">
   <summary class="year-heading">{{ y }}</summary>
-  {% bibliography --query @*[year={{ y }}] %}
+  <div class="year-list">
+    {% bibliography --query @*[year={{ y }}] %}
+  </div>
 </details>
 {% endfor %}
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.year-details').forEach(function (el) {
+    el.removeAttribute('open');
+  });
+});
+</script>
