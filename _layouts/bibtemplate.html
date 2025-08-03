@@ -27,7 +27,7 @@ pre{
   <strong>{{ entry.title | unescape_tilde }}</strong><br/>
   {% if entry.author %}
     {% for author in entry.author %}
-      {{ author.first | join: ' ' }} {{ author.last | join: ' ' }}{% unless forloop.last %}, {% endunless %}
+      {{ author.first }} {{ author.last }}{% unless forloop.last %}, {% endunless %}
     {% endfor %}
     <br/>
   {% endif %}
