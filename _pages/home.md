@@ -10,8 +10,9 @@ permalink: /
 I lead the UT Systems and Storage Lab. My group builds the next
 generation of data systems with a focus on performance and
 reliability. We open-source our software and collaborate closely with
-industry. I am also part of the UT Data Sytems group and the LASR research
-group at UT Austin.
+industry. I am also part of the [UT Data
+Sytems](https://ut-datasys.github.io/) group and the
+[LASR](https://www.cs.utexas.edu/lasr/) research group at UT Austin.
 
 <div class="container">
 <div class="row">
@@ -23,9 +24,3 @@ Research group out at lunch in 2018!
 </div>
 <br/>
 
-### About me
-
-I am an Associate Professor in the Department of Computer Science at the
-University of Texas at Austin. My research focuses on building storage systems
-that combine high performance with strong reliability guarantees.
-I completed my B.Tech degree at the College of Engineering, Guindy (CEG).
