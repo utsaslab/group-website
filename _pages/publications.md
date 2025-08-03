@@ -3,36 +3,11 @@ title: "Publications"
 layout: gridlay
 sitemap: false
 permalink: /publications/
-years: [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]
 ---
-[Publications by year]({{ site.url }}{{ site.baseurl }}/publications-by-year/)
 
-<style>
-.jumbotron{
-    padding:3%;
-    padding-bottom:10px;
-    padding-top:10px;
-    margin-top:10px;
-    margin-bottom:30px;
-}
-</style>
+You can browse our publications by year or see the full bibliography.
 
-<div class="jumbotron">
-### Preprints
-{% bibliography --query @unpublished %}
-</div>
+## [Publications by year]({{ site.url }}{{ site.baseurl }}/publications-by-year/)
 
-<div class="jumbotron">
-### Refereed conference proceedings
-{% bibliography --query @inproceedings[group!=workshop] %}
-</div>
+## [Full bibliography]({{ site.url }}{{ site.baseurl }}/full-publications/)
 
-<div class="jumbotron">
-### Refereed journal articles
-{% bibliography --query @article %}
-</div>
-
-<div class="jumbotron">
-### Workshop papers
-{% bibliography --query @*[group=workshop] %}
-</div>
