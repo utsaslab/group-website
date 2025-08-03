@@ -23,7 +23,23 @@ pre{
 </style>
 
 
-<div class="text-justify">{{ reference | unescape_tilde }}</div>
+<div class="text-justify">
+  <strong>{{ entry.title | unescape_tilde }}</strong>
+  {% if entry.author_array %}
+    <br/>
+    {% for author in entry.author_array %}
+      {{ author.first }} {{ author.last }}{% unless forloop.last %}, {% endunless %}
+    {% endfor %}
+  {% endif %}
+  <br/>
+  {% if entry.booktitle %}
+    <em>{{ entry.booktitle | remove: '"' | unescape_tilde }}</em>
+  {% elsif entry.journal %}
+    <em>{{ entry.journal | remove: '"' | unescape_tilde }}{% if entry.volume %}, Volume {{ entry.volume }}{% endif %}{% if entry.number %}, Issue {{ entry.number }}{% endif %}</em>
+  {% elsif entry.publisher %}
+    <em>{{ entry.publisher | remove: '"' | unescape_tilde }}</em>
+  {% endif %}
+</div>
 
 <!-- You can use the below to make your name bold -->
 <!-- {{reference | replace_first: 'Bryngelson, S. H.', '<b>Bryngelson, S. H.</b>' | replace_first: 'Bryngelson, S.', '<b>Bryngelson, S.</b>' }}</div> -->

@@ -17,20 +17,20 @@ years: [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]
 
 <div class="jumbotron">
 ### Preprints
-{% bibliography --query @unpublished %}
+{% bibliography --template bibtemplate --query @unpublished %}
 </div>
 
 <div class="jumbotron">
 ### Refereed conference proceedings
-{% bibliography --query @inproceedings[group!=workshop] %}
+{% bibliography --template bibtemplate --query @inproceedings[group!=workshop] %}
 </div>
 
 <div class="jumbotron">
 ### Refereed journal articles
-{% bibliography --query @article %}
+{% bibliography --template bibtemplate --query @article %}
 </div>
 
 <div class="jumbotron">
 ### Workshop papers
-{% bibliography --query @*[group=workshop] %}
+{% bibliography --template bibtemplate --query @*[group=workshop] %}
 </div>
