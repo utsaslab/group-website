@@ -79,7 +79,7 @@ permalink: /team/
 ## Alumni
 
 <div class="jumbotron">
-{% assign phd_total = site.data.alumni | where_exp: "item", "item.duration contains 'PhD'" | size %}
+{% assign phd_total = site.data.alumni | where_exp: "item", "item.duration contains 'PhD' and item.duration contains 'co-advised' == false" | size %}
 {% assign phd_counter = phd_total %}
 {% assign number_printed = 0 %}
 {% for member in site.data.alumni %}
@@ -96,11 +96,13 @@ permalink: /team/
 </div>
 <div class="col-sm-4 col-xs-12">
   <h4>{% if member.website %}<a href="{{ member.website }}" target="_blank">{{ member.name }}</a>{% else %}{{ member.name }}{% endif %}</h4>
-  {% if member.duration contains 'PhD' %}
-    <i>PhD #{{ phd_counter }} <br> Role: {{ member.info }}</i>
+  {% if member.duration contains 'PhD' and member.duration contains 'co-advised' == false %}
+    <i>PhD #{{ phd_counter }}</i><br>
+    <i>Role: {{ member.info }}</i>
     {% assign phd_counter = phd_counter | minus: 1 %}
   {% else %}
-    <i>{{ member.duration }} <br> Role: {{ member.info }}</i>
+    <i>{{ member.duration }}</i><br>
+    <i>Role: {{ member.info }}</i>
   {% endif %}
   <ul style="overflow: hidden">
   </ul>
