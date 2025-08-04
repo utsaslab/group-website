@@ -5,34 +5,38 @@ sitemap: false
 permalink: /publications/
 ---
 
-## You can browse publications by year or see the full bibliography.
+<p style="font-size: 1.2rem;">Browse publications by year or by type.</p>
 
-### [Publications by year]({{ site.url }}{{ site.baseurl }}/publications-by-year/)
+<p style="font-size: 1.2rem;">
+[Publications by year]({{ site.url }}{{ site.baseurl }}/publications-by-year/)
+</p>
 
-### [Full bibliography]({{ site.url }}{{ site.baseurl }}/full-publications/)
+<p style="font-size: 1.2rem;">
+[Publications by type]({{ site.url }}{{ site.baseurl }}/full-publications/)
+</p>
 
 **Legend:**
 
 <table class="table table-sm" style="max-width: 480px;">
   <tr>
     <td><button class="btn btn-success btm-sm">PDF</button></td>
-    <td>A publicly available copy of the research paper</td>
+    <td style="text-align: right;">A publicly available copy of the research paper</td>
   </tr>
   <tr>
     <td><button class="btn btn-info btm-sm">SLIDES</button></td>
-    <td>Presentation slides</td>
+    <td style="text-align: right;">Presentation slides</td>
   </tr>
   <tr>
     <td><button class="btn btn-media btm-sm">VIDEO</button></td>
-    <td>Recorded presentation or related video</td>
+    <td style="text-align: right;">Recorded presentation or related video</td>
   </tr>
   <tr>
     <td><button class="btn btn-media btm-sm">AUDIO</button></td>
-    <td>Audio recording</td>
+    <td style="text-align: right;">Audio recording</td>
   </tr>
   <tr>
     <td><button class="btn btn-danger btm-sm">BIB</button></td>
-    <td>BibTeX citation</td>
+    <td style="text-align: right;">BibTeX citation</td>
   </tr>
 </table>
 

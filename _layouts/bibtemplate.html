@@ -13,18 +13,23 @@
 }
 
 pre{
-    white-space: pre-wrap;  
+    white-space: pre-wrap;
     white-space: -moz-pre-wrap; 
     white-space: -pre-wrap; 
     white-space: -o-pre-wrap; 
     word-wrap: break-word; 
     width:100%; overflow-x:auto;
 }
+
+.publication-entry {
+    margin-bottom: 1rem;
+}
 </style>
 
 
-<div class="text-justify">
-  <strong>{{ entry.title | unescape_tilde }}</strong>
+<div class="publication-entry">
+  <div class="text-justify">
+    <strong>{{ entry.title | unescape_tilde }}</strong>
   {% if entry.author_array %}
     <br/>
     {% for author in entry.author_array %}
@@ -45,12 +50,12 @@ pre{
   {% elsif entry.publisher %}
     <em>{{ entry.publisher | remove: '"' | unescape_tilde }}</em>
   {% endif %}
-</div>
+  </div>
 
-<!-- You can use the below to make your name bold -->
-<!-- {{reference | replace_first: 'Bryngelson, S. H.', '<b>Bryngelson, S. H.</b>' | replace_first: 'Bryngelson, S.', '<b>Bryngelson, S.</b>' }}</div> -->
+  <!-- You can use the below to make your name bold -->
+  <!-- {{reference | replace_first: 'Bryngelson, S. H.', '<b>Bryngelson, S. H.</b>' | replace_first: 'Bryngelson, S.', '<b>Bryngelson, S.</b>' }}</div> -->
 
-{% assign bibtest = false %}
+  {% assign bibtest = false %}
 {% if entry.file %}
 {% assign bibfile = "/papers/" | append: entry.file %}
 {% for file in site.static_files %}
@@ -104,6 +109,7 @@ pre{
 
 <div id="b{{entry.key}}" style="display: none; background-color:black; border-radius:5px; padding:10px; margin-bottom:20px;">
 <pre>{{ entry.abstract }}</pre>
+</div>
 </div>
 
 <script>
