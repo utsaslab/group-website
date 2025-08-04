@@ -5,7 +5,7 @@ sitemap: false
 permalink: /publications/
 ---
 
-## You can browse publications by year or see the full bibliography.
+<p style="font-size: 1.2rem;">Browse publications by year or see the full bibliography.</p>
 
 <p style="font-size: 1.2rem;">
 [Publications by year]({{ site.url }}{{ site.baseurl }}/publications-by-year/)
