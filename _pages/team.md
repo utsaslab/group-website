@@ -79,7 +79,12 @@ permalink: /team/
 ## Alumni
 
 <div class="jumbotron">
-{% assign phd_total = site.data.alumni | where_exp: "item", "item.duration contains 'PhD' and item.duration contains 'co-advised' == false" | size %}
+{% assign phd_total = 0 %}
+{% for a in site.data.alumni %}
+  {% if a.duration contains 'PhD' and a.duration contains 'co-advised' == false %}
+    {% assign phd_total = phd_total | plus: 1 %}
+  {% endif %}
+{% endfor %}
 {% assign phd_counter = phd_total %}
 {% assign number_printed = 0 %}
 {% for member in site.data.alumni %}
