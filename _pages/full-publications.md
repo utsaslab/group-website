@@ -1,5 +1,5 @@
 ---
-title: "Full Publications"
+title: "Publications by type"
 layout: gridlay
 sitemap: false
 permalink: /full-publications/
@@ -15,22 +15,42 @@ years: [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]
 }
 </style>
 
-<div class="jumbotron">
-### Preprints
+{% capture preprints %}
 {% bibliography --template bibtemplate --query @unpublished %}
-</div>
+{% endcapture %}
+{% unless preprints | strip == "" %}
+<details class="jumbotron">
+<summary><h3>Preprints</h3></summary>
+{{ preprints }}
+</details>
+{% endunless %}
 
-<div class="jumbotron">
-### Refereed conference proceedings
+{% capture conf %}
 {% bibliography --template bibtemplate --query @inproceedings[group!=workshop] %}
-</div>
+{% endcapture %}
+{% unless conf | strip == "" %}
+<details class="jumbotron">
+<summary><h3>Refereed conference proceedings</h3></summary>
+{{ conf }}
+</details>
+{% endunless %}
 
-<div class="jumbotron">
-### Refereed journal articles
+{% capture journal %}
 {% bibliography --template bibtemplate --query @article %}
-</div>
+{% endcapture %}
+{% unless journal | strip == "" %}
+<details class="jumbotron">
+<summary><h3>Refereed journal articles</h3></summary>
+{{ journal }}
+</details>
+{% endunless %}
 
-<div class="jumbotron">
-### Workshop papers
+{% capture workshop %}
 {% bibliography --template bibtemplate --query @*[group=workshop] %}
-</div>
+{% endcapture %}
+{% unless workshop | strip == "" %}
+<details class="jumbotron">
+<summary><h3>Workshop papers</h3></summary>
+{{ workshop }}
+</details>
+{% endunless %}
