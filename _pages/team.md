@@ -81,8 +81,10 @@ permalink: /team/
 <div class="jumbotron">
 {% assign phd_total = 0 %}
 {% for a in site.data.alumni %}
-  {% if a.duration contains 'PhD' and a.duration contains 'co-advised' == false %}
-    {% assign phd_total = phd_total | plus: 1 %}
+  {% if a.duration contains 'PhD' %}
+    {% unless a.duration contains 'co-advised' %}
+      {% assign phd_total = phd_total | plus: 1 %}
+    {% endunless %}
   {% endif %}
 {% endfor %}
 {% assign phd_counter = phd_total %}
@@ -101,14 +103,17 @@ permalink: /team/
 </div>
 <div class="col-sm-4 col-xs-12">
   <h4>{% if member.website %}<a href="{{ member.website }}" target="_blank">{{ member.name }}</a>{% else %}{{ member.name }}{% endif %}</h4>
-  {% if member.duration contains 'PhD' and member.duration contains 'co-advised' == false %}
-    <i>PhD #{{ phd_counter }}</i><br>
-    <i>Role: {{ member.info }}</i>
-    {% assign phd_counter = phd_counter | minus: 1 %}
+  {% if member.duration contains 'PhD' %}
+    {% unless member.duration contains 'co-advised' %}
+      <i>PhD #{{ phd_counter }}</i><br>
+      {% assign phd_counter = phd_counter | minus: 1 %}
+    {% else %}
+      <i>{{ member.duration }}</i><br>
+    {% endunless %}
   {% else %}
     <i>{{ member.duration }}</i><br>
-    <i>Role: {{ member.info }}</i>
   {% endif %}
+  <i>Role: {{ member.info }}</i>
   <ul style="overflow: hidden">
   </ul>
 </div>
