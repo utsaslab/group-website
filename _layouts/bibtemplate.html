@@ -28,7 +28,13 @@ pre{
   {% if entry.author_array %}
     <br/>
     {% for author in entry.author_array %}
-      {{ author.first }} {{ author.last }}{% unless forloop.last %}, {% endunless %}
+      {% assign full_name = author.first | append: ' ' | append: author.last %}
+      {% assign coauthor = site.data['co-authors'] | where: 'name', full_name | first %}
+      {% if coauthor and coauthor.website %}
+        <a href="{{ coauthor.website }}">{{ author.first }} {{ author.last }}</a>{% unless forloop.last %}, {% endunless %}
+      {% else %}
+        {{ author.first }} {{ author.last }}{% unless forloop.last %}, {% endunless %}
+      {% endif %}
     {% endfor %}
   {% endif %}
   <br/>
