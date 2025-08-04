@@ -13,17 +13,21 @@
 }
 
 pre{
-    white-space: pre-wrap;  
+    white-space: pre-wrap;
     white-space: -moz-pre-wrap; 
     white-space: -pre-wrap; 
     white-space: -o-pre-wrap; 
     word-wrap: break-word; 
     width:100%; overflow-x:auto;
 }
+
+.publication-entry {
+    margin-bottom: 1rem;
+}
 </style>
 
 
-<div class="text-justify">
+<div class="text-justify publication-entry">
   <strong>{{ entry.title | unescape_tilde }}</strong>
   {% if entry.author_array %}
     <br/>
