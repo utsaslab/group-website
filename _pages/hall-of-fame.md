@@ -53,7 +53,7 @@ Reflects data up-to OSDI 25.
         {% endfor %}
         <tr>
           <td>{{ rank }}</td>
-          <td><a href="{{ author.dblp }}">{{ author.name }}</a></td>
+          <td><a href="{{ author.dblp }}">{{ author.name }}</a>{% assign lastfive = author.lastfive | plus: 0 %}{% if lastfive >= 15 %} 🚀{% elsif lastfive >= 10 %} 🔥🔥{% elsif lastfive >= 5 %} 🔥{% endif %}</td>
           <td>{{ affiliation }}</td>
           <td>{{ author.freq }}</td>
           <td>{{ author.lastfive }}</td>
