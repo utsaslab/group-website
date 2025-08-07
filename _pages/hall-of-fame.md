@@ -77,12 +77,20 @@ This table lists groups authors in the above table by institution and displays t
   <tbody>
     {% assign author_info = site.data["hof-authors"] %}
     {% assign affiliation_groups = author_info | where_exp: "item", "item.affiliation != ''" | group_by: "affiliation" | sort: "size" | reverse %}
-    {% assign top_affiliations = affiliation_groups | slice: 0, 10 %}
-    {% for group in top_affiliations %}
-      <tr>
-        <td>{{ group.name }}</td>
-        <td>{{ group.size }}</td>
-      </tr>
+    {% if affiliation_groups.size > 9 %}
+      {% assign tenth_size = affiliation_groups[9].size %}
+    {% else %}
+      {% assign tenth_size = 0 %}
+    {% endif %}
+    {% for group in affiliation_groups %}
+      {% if forloop.index <= 10 or group.size == tenth_size %}
+        <tr>
+          <td>{{ group.name }}</td>
+          <td>{{ group.size }}</td>
+        </tr>
+      {% else %}
+        {% break %}
+      {% endif %}
     {% endfor %}
   </tbody>
 </table>
