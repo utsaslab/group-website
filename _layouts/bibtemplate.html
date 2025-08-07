@@ -35,10 +35,18 @@ pre{
     {% for author in entry.author_array %}
       {% assign full_name = author.first | append: ' ' | append: author.last %}
       {% assign coauthor = site.data['co-authors'] | where: 'name', full_name | first %}
+      {% capture name_html %}
+        {% if full_name == 'Vijay Chidambaram' %}
+          <u>{{ author.first }} {{ author.last }}</u>
+        {% else %}
+          {{ author.first }} {{ author.last }}
+        {% endif %}
+      {% endcapture %}
+      {% assign name_html = name_html | strip %}
       {% if coauthor and coauthor.website %}
-        <a href="{{ coauthor.website }}">{{ author.first }} {{ author.last }}</a>{% unless forloop.last %}, {% endunless %}
+        <a href="{{ coauthor.website }}">{{ name_html }}</a>{% unless forloop.last %}, {% endunless %}
       {% else %}
-        {{ author.first }} {{ author.last }}{% unless forloop.last %}, {% endunless %}
+        {{ name_html }}{% unless forloop.last %}, {% endunless %}
       {% endif %}
     {% endfor %}
   {% endif %}
