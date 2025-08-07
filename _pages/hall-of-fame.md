@@ -31,6 +31,7 @@ Reflects data up-to OSDI 25.
       <th>Author</th>
       <th>Affiliation</th>
       <th>Publications</th>
+      <th>Last 5 Years</th>
     </tr>
   </thead>
   <tbody>
@@ -55,6 +56,7 @@ Reflects data up-to OSDI 25.
           <td><a href="{{ author.dblp }}">{{ author.name }}</a></td>
           <td>{{ affiliation }}</td>
           <td>{{ author.freq }}</td>
+          <td>{{ author.lastfive }}</td>
         </tr>
       {% endfor %}
     {% endfor %}
