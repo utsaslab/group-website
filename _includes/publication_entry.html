@@ -25,7 +25,9 @@ pre{
 
 <div class="publication-entry">
   <div class="text-justify">
-    <strong>{{ entry.title | unescape_tilde | replace: '{', '' | replace: '}', '' }}</strong>
+    {% assign open_brace = '{' %}
+    {% assign close_brace = '}' %}
+    <strong>{{ entry.title | unescape_tilde | remove: open_brace | remove: close_brace }}</strong>
   {% if entry.author_array %}
     <br/>
     {% for author in entry.author_array %}
