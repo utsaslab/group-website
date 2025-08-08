@@ -1,0 +1,140 @@
+---
+---
+
+
+<style>
+.btn{
+    margin-bottom:5px;
+    padding-top:0px;
+    padding-bottom:0px;
+    padding-left:15px;
+    padding-right:15px;
+    height:20px
+}
+
+pre{
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    width:100%; overflow-x:auto;
+}
+
+.publication-entry {
+    margin-bottom: 1rem;
+}
+</style>
+
+
+<div class="publication-entry">
+  <div class="text-justify">
+    <strong>{{ entry.title | unescape_tilde }}</strong>
+  {% if entry.author_array %}
+    <br/>
+    {% for author in entry.author_array %}
+      {% assign full_name = author.first | append: ' ' | append: author.last %}
+      {% assign coauthor = site.data['co-authors'] | where: 'name', full_name | first %}
+      {% capture name_html %}
+        {% if full_name == 'Vijay Chidambaram' %}
+          <u>{{ author.first }} {{ author.last }}</u>
+        {% else %}
+          {{ author.first }} {{ author.last }}
+        {% endif %}
+      {% endcapture %}
+      {% assign name_html = name_html | strip %}
+      {% if coauthor and coauthor.website %}
+        <a href="{{ coauthor.website }}">{{ name_html }}</a>{% unless forloop.last %}, {% endunless %}
+      {% else %}
+        {{ name_html }}{% unless forloop.last %}, {% endunless %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+  <br/>
+  {% if entry.booktitle %}
+    <em>{{ entry.booktitle | remove: '"' | unescape_tilde }}</em>
+  {% elsif entry.journal %}
+    <em>{{ entry.journal | remove: '"' | unescape_tilde }}{% if entry.volume %}, Volume {{ entry.volume }}{% endif %}{% if entry.number %}, Issue {{ entry.number }}{% endif %}</em>
+  {% elsif entry.publisher %}
+    <em>{{ entry.publisher | remove: '"' | unescape_tilde }}</em>
+  {% endif %}
+  </div>
+
+  <!-- You can use the below to make your name bold -->
+  <!-- {{reference | replace_first: 'Bryngelson, S. H.', '<b>Bryngelson, S. H.</b>' | replace_first: 'Bryngelson, S.', '<b>Bryngelson, S.</b>' }}</div> -->
+
+  {% assign bibtest = false %}
+{% if entry.file %}
+{% assign bibfile = "/papers/" | append: entry.file %}
+{% for file in site.static_files %}
+  {% if file.path contains bibfile %}
+   {% assign bibtest = true %}
+  {% endif %}
+{% endfor %}
+{% endif %}
+
+{% if entry.pdf %}
+<a href="{{ entry.pdf | unescape_tilde }}" target="_blank"><button class="btn btn-success btm-sm">PDF</button></a>
+{% elsif bibtest %}
+<a href="{{ site.url }}{{ site.baseurl }}/papers/{{ entry.file }}" target="_blank"><button class="btn btn-success btm-sm">PDF</button></a>
+{% endif %}
+
+{% if entry.doi %}
+{% if entry.type == 'unpublished' %}
+<a href="{{ entry.doi | prepend: 'https://arxiv.org/abs/' | unescape_tilde }}" target="_blank"><button class="btn btn-primary btm-sm">ARXIV</button></a>
+{% else %}
+<a href="{{ entry.doi | prepend: 'http://doi.org/' | unescape_tilde }}" target="_blank"><button class="btn btn-primary btm-sm">DOI</button></a>
+{% endif %}
+{% endif %}
+
+{% if entry.slides %}
+<a href="{{ entry.slides | unescape_tilde }}" target="_blank"><button class="btn btn-info btm-sm">SLIDES</button></a>
+{% endif %}
+{% if entry.video %}
+<a href="{{ entry.video | unescape_tilde }}" target="_blank"><button class="btn btn-media btm-sm">VIDEO</button></a>
+{% endif %}
+{% if entry.audio %}
+<a href="{{ entry.audio | unescape_tilde }}" target="_blank"><button class="btn btn-media btm-sm">AUDIO</button></a>
+{% endif %}
+
+{% if entry.type == 'unpublished' or entry.type == 'article' or  entry.type == 'thesis' or entry.type == 'inproceedings' or entry.type == 'report' %}
+<button class="btn btn-danger btm-sm"  onclick="toggleBibtex('{{entry.key}}')">BIB</button>
+{% endif %}
+
+{% if entry.abstract %}
+<button class="btn btn-warning btm-sm"  onclick="toggleAbstract('{{entry.key}}')">ABSTRACT</button>
+{% endif %}
+
+{% if entry.abstract %}
+<div id="a{{entry.key}}" style="display: none; background-color:black; border-radius:5px; padding:10px; margin-bottom:20px;">
+<pre>{{ entry.bibtex | unescape_tilde | remove: "entry.abstract" }}</pre>
+</div>
+{% else %}
+<div id="a{{entry.key}}" style="display: none; background-color:black; border-radius:5px; padding:10px; margin-bottom:20px;">
+<pre>{{ entry.bibtex | unescape_tilde }}</pre>
+</div>
+{% endif %}
+
+<div id="b{{entry.key}}" style="display: none; background-color:black; border-radius:5px; padding:10px; margin-bottom:20px;">
+<pre>{{ entry.abstract }}</pre>
+</div>
+</div>
+
+<script>
+function toggleBibtex(key) {
+    var x = document.getElementById('a' + key);
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+function toggleAbstract(key) {
+    var x = document.getElementById('b' + key);
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+</script>
