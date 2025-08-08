@@ -1,46 +1,43 @@
-require 'bibtex'
+require 'jekyll/scholar'
 
 module Jekyll
   class KeywordsGenerator < Generator
     safe true
-    priority :high
+    priority :low # Run after jekyll-scholar
 
     def generate(site)
-      scholar_config = site.config['scholar']
-      bib_file = File.join(site.source, scholar_config['source'], scholar_config['bibliography'])
+      return if !site.config['scholar']
 
-      return unless File.exist?(bib_file)
+      scholar = site.scholar
+      if !scholar || !scholar.bibliography
+        return
+      end
 
-      bib = BibTeX.open(bib_file)
       pubs_by_keyword = Hash.new { |h, k| h[k] = [] }
 
-      bib.each do |entry|
-        next if entry.keywords.nil?
+      scholar.bibliography.each do |entry|
+        next unless entry.respond_to?(:keywords) && entry.keywords
 
-        # The jekyll-scholar plugin uses the entry key as the id
-        # and we need it to generate the bibliography entry.
-        proc_entry = entry.convert_to_citeproc
-        proc_entry['id'] = entry.key
-
-        keywords = entry.keywords.split(',').map(&:strip)
+        keywords = entry.keywords.to_s.split(',').map(&:strip)
         keywords.each do |keyword|
-          pubs_by_keyword[keyword] << proc_entry
+          pubs_by_keyword[keyword] << entry
         end
       end
 
+      # Sort publications within each keyword group
       pubs_by_keyword.each do |keyword, pubs|
         pubs.sort_by! do |p|
           [
-            p.fetch('year', 0).to_i,
-            p.fetch('volume', 0).to_i,
-            p.fetch('number', 0).to_i
+            p.year.to_i,
+            p.volume.to_i,
+            p.number.to_i
           ]
         end.reverse!
       end
 
       sorted_keywords = pubs_by_keyword.keys.sort_by do |keyword|
         pubs = pubs_by_keyword[keyword]
-        most_recent_year = pubs.map { |p| p.fetch('year', 0).to_i }.max || 0
+        most_recent_year = pubs.map { |p| p.year.to_i }.max || 0
         [pubs.size, most_recent_year]
       end.reverse
 
