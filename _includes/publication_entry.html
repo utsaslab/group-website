@@ -25,7 +25,7 @@ pre{
 
 <div class="publication-entry">
   <div class="text-justify">
-    <strong>{{ entry.title | unescape_tilde | remove: '{' | remove: '}' }}</strong>
+    <strong>{{ entry.title | unescape_tilde | replace: '{', '' | replace: '}', '' }}</strong>
   {% if entry.author_array %}
     <br/>
     {% for author in entry.author_array %}
