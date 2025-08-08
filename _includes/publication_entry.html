@@ -25,8 +25,8 @@ pre{
 
 <div class="publication-entry">
   <div class="text-justify">
-    {% assign open_brace = '{' %}
-    {% assign close_brace = '}' %}
+    {%- assign open_brace = '{' -%}
+    {%- assign close_brace = '}' -%}
     <strong>{{ entry.title | unescape_tilde | remove: open_brace | remove: close_brace }}</strong>
   {% if entry.author_array %}
     <br/>
@@ -50,11 +50,11 @@ pre{
   {% endif %}
   <br/>
   {% if entry.booktitle %}
-    <em>{{ entry.booktitle | remove: '"' | unescape_tilde }}</em>
+    <em>{{ entry.booktitle | remove: '"' | unescape_tilde | remove: open_brace | remove: close_brace }}</em>
   {% elsif entry.journal %}
-    <em>{{ entry.journal | remove: '"' | unescape_tilde }}{% if entry.volume %}, Volume {{ entry.volume }}{% endif %}{% if entry.number %}, Issue {{ entry.number }}{% endif %}</em>
+    <em>{{ entry.journal | remove: '"' | unescape_tilde | remove: open_brace | remove: close_brace }}{% if entry.volume %}, Volume {{ entry.volume }}{% endif %}{% if entry.number %}, Issue {{ entry.number }}{% endif %}</em>
   {% elsif entry.publisher %}
-    <em>{{ entry.publisher | remove: '"' | unescape_tilde }}</em>
+    <em>{{ entry.publisher | remove: '"' | unescape_tilde | remove: open_brace | remove: close_brace }}</em>
   {% endif %}
   </div>
 

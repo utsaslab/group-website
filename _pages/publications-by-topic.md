@@ -4,14 +4,24 @@ layout: gridlay
 sitemap: false
 permalink: /publications-by-topic/
 ---
+<style>
+.jumbotron{
+    padding:3%;
+    padding-bottom:10px;
+    padding-top:10px;
+    margin-top:10px;
+    margin-bottom:30px;
+}
+</style>
 
 <div markdown="0">
 {% for keyword in site.data.sorted_keywords %}
-<details class="year-details">
-  <summary class="year-heading">{{ keyword }}</summary>
+<details class="jumbotron">
+  <summary>{{ keyword }}</summary>
   <div class="year-list">
+    {% assign total_pubs = site.data.publications_by_keyword[keyword] | size %}
     {% for entry in site.data.publications_by_keyword[keyword] %}
-      {{ forloop.index }}. {% include publication_entry.html %}
+      {{ total_pubs | minus: forloop.index0 }}. {% include publication_entry.html %}
     {% endfor %}
   </div>
 </details>
