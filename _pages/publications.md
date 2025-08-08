@@ -5,10 +5,14 @@ sitemap: false
 permalink: /publications/
 ---
 
-<p style="font-size: 1.2rem;">Browse publications by year or by type.</p>
+<p style="font-size: 1.2rem;">Browse publications by year, by topic, or by type.</p>
 
 <p style="font-size: 1.2rem;">
 [Publications by year]({{ site.url }}{{ site.baseurl }}/publications-by-year/)
+</p>
+
+<p style="font-size: 1.2rem;">
+[Publications by topic]({{ site.url }}{{ site.baseurl }}/publications-by-topic/)
 </p>
 
 <p style="font-size: 1.2rem;">
