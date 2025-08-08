@@ -15,7 +15,7 @@ module Jekyll
       pubs_by_keyword = Hash.new { |h, k| h[k] = [] }
 
       bib.each do |entry|
-        next unless entry.key?('keywords')
+        next if entry.keywords.nil?
 
         # The jekyll-scholar plugin uses the entry key as the id
         # and we need it to generate the bibliography entry.
