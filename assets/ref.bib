@@ -1,6 +1,6 @@
 @inproceedings{huang25tigon,
-  author =	 {Yibo Huang and Haowei Chen and Newton Ni and Yan
-                  Sun and Vijay Chidambaram and Dixin Tang and Emmett
+  author =	 {Yibo Huang and Haowei Chen and Newton Ni and Yan Sun
+                  and Vijay Chidambaram and Dixin Tang and Emmett
                   Witchel},
   title =	 "{Tigon: A Distributed Database for a CXL Pod}",
   booktitle =	 {19th USENIX Symposium on Operating Systems Design
@@ -10,6 +10,7 @@
                   {https://www.usenix.org/system/files/osdi25-huang-yibo.pdf},
   publisher =	 {USENIX Association},
   month =	 jul,
+  keywords =	 {CXL, databases}
 }
 
 @inproceedings{hayley25power,
@@ -25,6 +26,7 @@
                   {https://www.usenix.org/system/files/osdi25-leblanc.pdf},
   publisher =	 {USENIX Association},
   month =	 jul,
+  keywords =	 {verification, key-value stores}
 }
 
 @inproceedings{wang2025gpemu,
@@ -40,7 +42,8 @@
   number =	 {6},
   pages =	 {1919--1932},
   year =	 {2025},
-  PDF =		 {https://vldb.org/pvldb/vol18/p1919-wang.pdf}
+  PDF =		 {https://vldb.org/pvldb/vol18/p1919-wang.pdf},
+  keywords =	 {ML}
 }
 
 @inproceedings{huang2025pasha,
@@ -53,7 +56,9 @@
                   Systems Research (CIDR ’25)"},
   publisher =	 {VLDB},
   address =	 {Amsterdam, The Netherlands},
-  pdf =		 {https://www.cs.utexas.edu/~witchel/pubs/huang25cidr-pasha.pdf},
+  pdf =
+                  {https://www.cs.utexas.edu/~witchel/pubs/huang25cidr-pasha.pdf},
+  keywords =	 {CXL, databases}
 }
 
 @inproceedings{ro2024optimizing,
@@ -66,8 +71,10 @@
                   Infrastructure (HotInfra’24)"},
   year =	 {2024},
   address =	 {Austin, TX, USA},
-  pdf =		 {https://utns.cs.utexas.edu/assets/papers/hotinfra24-distill.pdf},
-  group =	 {workshop}
+  pdf =
+                  {https://utns.cs.utexas.edu/assets/papers/hotinfra24-distill.pdf},
+  group =	 {workshop},
+  keywords =	 {ML},
 }
 
 @inproceedings{purohith17sqlite,
@@ -80,8 +87,10 @@
   organization = {ACM},
   year =	 {2017},
   address =	 {Mumbai, India},
-  pdf =		 {https://www.cs.utexas.edu/~vijay/papers/apsys17-sqlite.pdf},
-  group =	 {workshop}
+  pdf =
+                  {https://www.cs.utexas.edu/~vijay/papers/apsys17-sqlite.pdf},
+  group =	 {workshop},
+  keywords =	 {databases}
 }
 
 @inproceedings{HuEtAl18-TxFS,
@@ -95,7 +104,9 @@
   year =	 {2018},
   address =	 {Boston, MA},
   publisher =	 {USENIX Association},
-  pdf =		 {https://www.usenix.org/system/files/conference/atc18/atc18-hu.pdf},
+  pdf =
+                  {https://www.usenix.org/system/files/conference/atc18/atc18-hu.pdf},
+  keywords =	 {file systems, databases}
 }
 
 @inproceedings{conway20-splinterdb,
@@ -111,7 +122,9 @@
   pages =	 {49--63},
   publisher =	 {{USENIX} Association},
   month =	 jul,
-  pdf =		 {https://www.usenix.org/system/files/atc20-conway.pdf},
+  pdf =
+                  {https://www.usenix.org/system/files/atc20-conway.pdf},
+  keywords =	 {key-valeu stores}
 }
 
 @inproceedings{atc21-rainblock,
@@ -127,48 +140,74 @@
   pages =	 {333--347},
   publisher =	 {{USENIX} Association},
   month =	 jul,
-  pdf =		 {https://www.usenix.org/system/files/atc21-ponnapalli.pdf},
+  pdf =
+                  {https://www.usenix.org/system/files/atc21-ponnapalli.pdf},
+  keywords =	 {blockchain}
 }
 
 @inproceedings{chipmunk-eurosys23,
-  author = {Hayley LeBlanc and Shankara Pailoor and Om Saran and Işıl Dillig and James Bornholt and Vijay Chidambaram},
-  title = "{Chipmunk: Investigating Crash-Consistency in Persistent-Memory File Systems}",
-  booktitle = {EuroSys '23: Eighteenth European Conference on Computer Systems},
-  year = {2023},
-  month = may,
-  pdf = {https://www.cs.utexas.edu/~vijay/papers/chipmunk-eurosys23.pdf},
+  author =	 {Hayley LeBlanc and Shankara Pailoor and Om Saran and
+                  Işıl Dillig and James Bornholt and Vijay
+                  Chidambaram},
+  title =	 "{Chipmunk: Investigating Crash-Consistency in
+                  Persistent-Memory File Systems}",
+  booktitle =	 {EuroSys '23: Eighteenth European Conference on
+                  Computer Systems},
+  year =	 {2023},
+  month =	 may,
+  pdf =
+                  {https://www.cs.utexas.edu/~vijay/papers/chipmunk-eurosys23.pdf},
+  keywords =	 {persistent memory, file systems}
 }
 
 @article{dinomo-vldb23,
-  author = {Sekwon Lee and Soujanya Ponnapalli and Sharad Singhal and Marcos K. Aguilera and Kimberly Keeton and Vijay Chidambaram},
-  title = "{DINOMO: An Elastic, Scalable, High-Performance Key-Value Store for Disaggregated Persistent Memory}",
-  journal = {Proceedings of the {VLDB} Endowment},
-  volume = {15},
-  number = {13},
-  year = {2022},
-  pdf = {https://www.vldb.org/pvldb/vol15/p4023-lee.pdf},
+  author =	 {Sekwon Lee and Soujanya Ponnapalli and Sharad
+                  Singhal and Marcos K. Aguilera and Kimberly Keeton
+                  and Vijay Chidambaram},
+  title =	 "{DINOMO: An Elastic, Scalable, High-Performance
+                  Key-Value Store for Disaggregated Persistent
+                  Memory}",
+  journal =	 {Proceedings of the {VLDB} Endowment},
+  volume =	 {15},
+  number =	 {13},
+  year =	 {2022},
+  pdf =		 {https://www.vldb.org/pvldb/vol15/p4023-lee.pdf},
+  keywords =	 {persistent memory, key-value stores, disaggregated
+                  systems}
 }
 
 @inproceedings{AlagappanEtAl18-FAST,
-  author = {Ramnatthan Alagappan and Aishwarya Ganesan and Eric Lee and Aws Albarghouthi and Vijay Chidambaram and Andrea C. Arpaci-Dusseau and Remzi H. Arpaci-Dusseau},
-  title = {Protocol-Aware Recovery for Consensus-Based Storage},
-  booktitle = {16th USENIX Conference on File and Storage Technologies (FAST 18)},
-  year = {2018},
-  address = {Oakland, CA},
-  publisher = {USENIX Association},
-  pdf = {https://www.usenix.org/system/files/conference/fast18/fast18-alagappan.pdf},
+  author =	 {Ramnatthan Alagappan and Aishwarya Ganesan and Eric
+                  Lee and Aws Albarghouthi and Vijay Chidambaram and
+                  Andrea C. Arpaci-Dusseau and Remzi
+                  H. Arpaci-Dusseau},
+  title =	 {Protocol-Aware Recovery for Consensus-Based Storage},
+  booktitle =	 {16th USENIX Conference on File and Storage
+                  Technologies (FAST 18)},
+  year =	 {2018},
+  address =	 {Oakland, CA},
+  publisher =	 {USENIX Association},
+  pdf =
+                  {https://www.usenix.org/system/files/conference/fast18/fast18-alagappan.pdf},
+  keywords =	 {distributed systems, consensus}
 }
 
 @inproceedings{fast21-checkfreq,
-  author = {Jayashree Mohan and Amar Phanishayee and Vijay Chidambaram},
-  title = {CheckFreq: Frequent, Fine-Grained {DNN} Checkpointing},
-  booktitle = {19th {USENIX} Conference on File and Storage Technologies ({FAST} 21)},
-  year = {2021},
-  slides = {https://www.usenix.org/sites/default/files/conference/protected-files/fast21_slides_mohan.pdf},
-  publisher = {{USENIX} Association},
-  month = feb,
-  pdf = {https://www.usenix.org/system/files/fast21-mohan.pdf},
-  video={https://www.youtube.com/watch?v=E3uaeaqfjcY},
+  author =	 {Jayashree Mohan and Amar Phanishayee and Vijay
+                  Chidambaram},
+  title =	 {CheckFreq: Frequent, Fine-Grained {DNN}
+                  Checkpointing},
+  booktitle =	 {19th {USENIX} Conference on File and Storage
+                  Technologies ({FAST} 21)},
+  year =	 {2021},
+  slides =
+                  {https://www.usenix.org/sites/default/files/conference/protected-files/fast21_slides_mohan.pdf},
+  publisher =	 {{USENIX} Association},
+  month =	 feb,
+  pdf =
+                  {https://www.usenix.org/system/files/fast21-mohan.pdf},
+  video =	 {https://www.youtube.com/watch?v=E3uaeaqfjcY},
+  keywords =	 {ML}
 }
 
 @inproceedings{fast22-paio,
@@ -190,6 +229,7 @@
   pdf =
                   {https://www.usenix.org/system/files/fast22-macedo.pdf},
   video =	 {https://www.youtube.com/watch?v=o9DvOiWp4dI},
+  keywords =	 {file systems}
 }
 
 @inproceedings{shastri19gdpr,
@@ -206,7 +246,8 @@
                   {https://www.usenix.org/system/files/hotcloud19-paper-shastri.pdf},
   slides =
                   {https://www.usenix.org/sites/default/files/conference/protected-files/hotcloud19_slides_shastri.pdf},
-  group =	 {workshop}
+  group =	 {workshop},
+  keywords =	 {GDPR}
 }
 
 @inproceedings{HuEtAl17-T2FS,
@@ -217,8 +258,10 @@
                   (HotOS 17)},
   year =	 {2017},
   address =	 {Whistler, Canada},
-  pdf =		 {https://www.cs.utexas.edu/~vijay/papers/hotos17-t2fs.pdf},
-  group =	 {workshop}
+  pdf =
+                  {https://www.cs.utexas.edu/~vijay/papers/hotos17-t2fs.pdf},
+  group =	 {workshop},
+  keywords =	 {file systems, databases}
 }
 
 @inproceedings{gonzalez17cclog,
@@ -231,9 +274,12 @@
   organization = {USENIX Association},
   year =	 {2017},
   address =	 {Santa Clara, CA},
-  slides = {https://www.usenix.org/sites/default/files/conference/protected-files/hotstorage17_slides_gonzalez.pdf},
-  pdf =		 {https://www.usenix.org/system/files/conference/hotstorage17/hotstorage17-paper-gonzalez.pdf},
-  group =	 {workshop}
+  slides =
+                  {https://www.usenix.org/sites/default/files/conference/protected-files/hotstorage17_slides_gonzalez.pdf},
+  pdf =
+                  {https://www.usenix.org/system/files/conference/hotstorage17/hotstorage17-paper-gonzalez.pdf},
+  group =	 {workshop},
+  keywords =	 {robotics}
 }
 
 @inproceedings{martinez17crashmonkey,
@@ -249,7 +295,8 @@
                   {https://www.usenix.org/sites/default/files/conference/protected-files/hotstorage17_slides_martinez.pdf},
   pdf =
                   {https://www.usenix.org/system/files/conference/hotstorage17/hotstorage17-paper-martinez.pdf},
-  group =	 {workshop}
+  group =	 {workshop},
+  keywords =	 {file systems}
 }
 
 @inproceedings{mohan17energy,
@@ -267,7 +314,8 @@
                   {https://www.usenix.org/sites/default/files/conference/protected-files/hotstorage_slides_purohith.pdf},
   pdf =
                   {https://www.usenix.org/system/files/conference/hotstorage17/hotstorage17-paper-mohan.pdf},
-  group =	 {workshop}
+  group =	 {workshop},
+  keywords =	 {mobile systems}
 }
 
 @inproceedings{raju18mlsm,
@@ -285,7 +333,8 @@
                   {https://www.usenix.org/system/files/conference/hotstorage18/hotstorage18-paper-raju.pdf},
   slides =
                   {https://www.usenix.org/sites/default/files/conference/protected-files/hotstorage18_slides_ponnapalli.pdf},
-  group =	 {workshop}
+  group =	 {workshop},
+  keywords =	 {blockchain}
 }
 
 @inproceedings{shah19gdpr,
@@ -302,30 +351,42 @@
                   {https://www.usenix.org/system/files/hotstorage19-paper-shah.pdf},
   slides =
                   {https://www.usenix.org/sites/default/files/conference/protected-files/hotstorage19_slides_shah.pdf},
-  group =	 {workshop}
+  group =	 {workshop},
+  keywords =	 {GDPR}
 }
 
 @inproceedings{shah2021memory,
-  title = {Memory Optimization for Deep Networks},
-  author = {Aashaka Shah and Chao-Yuan Wu and Jayashree Mohan and Vijay Chidambaram and Philipp Kraehenbuehl},
-  booktitle = {International Conference on Learning Representations},
-  year = {2021},
-  pdf = {https://www.cs.utexas.edu/~vijay/papers/iclr21-monet.pdf},
-  arxiv = {https://arxiv.org/abs/2010.14501},
+  title =	 {Memory Optimization for Deep Networks},
+  author =	 {Aashaka Shah and Chao-Yuan Wu and Jayashree Mohan
+                  and Vijay Chidambaram and Philipp Kraehenbuehl},
+  booktitle =	 {International Conference on Learning
+                  Representations (ICLR 21)},
+  year =	 {2021},
+  pdf =
+                  {https://www.cs.utexas.edu/~vijay/papers/iclr21-monet.pdf},
+  arxiv =	 {https://arxiv.org/abs/2010.14501},
+  keywords =	 {ML}
 }
 
 @InProceedings{icml23-lipt,
-  title = {Lowering the Pre-training Tax for Gradient-based Subset Training: A Lightweight Distributed Pre-Training Toolkit},
-  author = {Ro, Yeonju and Wang, Zhangyang and Chidambaram, Vijay and Akella, Aditya},
-  booktitle = {Proceedings of the 40th International Conference on Machine Learning},
-  pages = {29130--29142},
-  year = {2023},
-  editor = {Krause, Andreas and Brunskill, Emma and Cho, Kyunghyun and Engelhardt, Barbara and Sabato, Sivan and Scarlett, Jonathan},
-  volume = {202},
-  series = {Proceedings of Machine Learning Research},
-  month = {23--29 Jul},
-  publisher = {PMLR},
-  pdf = {https://proceedings.mlr.press/v202/ro23a/ro23a.pdf},
+  title =	 {Lowering the Pre-training Tax for Gradient-based
+                  Subset Training: A Lightweight Distributed
+                  Pre-Training Toolkit},
+  author =	 {Ro, Yeonju and Wang, Zhangyang and Chidambaram,
+                  Vijay and Akella, Aditya},
+  booktitle =	 {Proceedings of the 40th International Conference on
+                  Machine Learning (ICML 23)},
+  pages =	 {29130--29142},
+  year =	 {2023},
+  editor =	 {Krause, Andreas and Brunskill, Emma and Cho,
+                  Kyunghyun and Engelhardt, Barbara and Sabato, Sivan
+                  and Scarlett, Jonathan},
+  volume =	 {202},
+  series =	 {Proceedings of Machine Learning Research},
+  month =	 {23--29 Jul},
+  publisher =	 {PMLR},
+  pdf =		 {https://proceedings.mlr.press/v202/ro23a/ro23a.pdf},
+  keywords =	 {ML}
 }
 
 @inproceedings{chauhan16nvmove,
@@ -338,47 +399,69 @@
                   Operating Systems and Workloads (INFLOW 16)}",
   organization = {USENIX Association},
   year =	 {2016},
-  pdf =		 {https://www.usenix.org/system/files/conference/inflow16/inflow16-paper-chauhan.pdf},
-  group =	 {workshop}
+  pdf =
+                  {https://www.usenix.org/system/files/conference/inflow16/inflow16-paper-chauhan.pdf},
+  group =	 {workshop},
+  keywords =	 {persistent memory}
 }
 
 @inproceedings{crashmonkey18mohan,
-  title = "{Finding Crash-Consistency Bugs with Bounded Black-Box Crash Testing}",
-  author = {Mohan, Jayashree and Martinez, Ashlie and Ponnapalli, Soujanya and Raju, Pandian and Chidambaram, Vijay},
-  booktitle = "{13th USENIX Symposium on Operating Systems Design and Implementation (OSDI 2018)}",
+  title =	 "{Finding Crash-Consistency Bugs with Bounded
+                  Black-Box Crash Testing}",
+  author =	 {Mohan, Jayashree and Martinez, Ashlie and
+                  Ponnapalli, Soujanya and Raju, Pandian and
+                  Chidambaram, Vijay},
+  booktitle =	 "{13th USENIX Symposium on Operating Systems Design
+                  and Implementation (OSDI 2018)}",
   organization = {USENIX Association},
-  address = {Carlsbad, CA},
-  year = {2018},
-  pdf = {https://www.usenix.org/system/files/osdi18-mohan.pdf},
-  audio = {https://2459d6dc103cb5933875-c0245c5c937c5dedcca3f1764ecc9b2f.ssl.cf2.rackcdn.com/osdi18/mohan.mp3},
-  slides = {https://www.usenix.org/sites/default/files/conference/protected-files/osdi18_slides_mohan.pdf},
+  address =	 {Carlsbad, CA},
+  year =	 {2018},
+  pdf =
+                  {https://www.usenix.org/system/files/osdi18-mohan.pdf},
+  audio =
+                  {https://2459d6dc103cb5933875-c0245c5c937c5dedcca3f1764ecc9b2f.ssl.cf2.rackcdn.com/osdi18/mohan.mp3},
+  slides =
+                  {https://www.usenix.org/sites/default/files/conference/protected-files/osdi18_slides_mohan.pdf},
+  keywords =	 {file systems}
 }
 
 @inproceedings{osdi22-synergy,
-  author = {Jayashree Mohan and Amar Phanishayee and Janardhan Kulkarni and Vijay Chidambaram},
-  title = {Looking Beyond {GPUs} for {DNN} Scheduling on {Multi-Tenant} Clusters},
-  booktitle = {16th USENIX Symposium on Operating Systems Design and Implementation (OSDI 22)},
-  year = {2022},
-  isbn = {978-1-939133-28-1},
-  address = {Carlsbad, CA},
-  pages = {579--596},
-  publisher = {USENIX Association},
-  month = jul,
-  pdf = {https://www.usenix.org/system/files/osdi22-mohan.pdf},
-  slides = {https://www.usenix.org/sites/default/files/conference/protected-files/osdi22_slides_mohan.pdf},
-  video = {https://www.youtube.com/watch?v=T3ZctBwYxXY},
+  author =	 {Jayashree Mohan and Amar Phanishayee and Janardhan
+                  Kulkarni and Vijay Chidambaram},
+  title =	 {Looking Beyond {GPUs} for {DNN} Scheduling on
+                  {Multi-Tenant} Clusters},
+  booktitle =	 {16th USENIX Symposium on Operating Systems Design
+                  and Implementation (OSDI 22)},
+  year =	 {2022},
+  isbn =	 {978-1-939133-28-1},
+  address =	 {Carlsbad, CA},
+  pages =	 {579--596},
+  publisher =	 {USENIX Association},
+  month =	 jul,
+  pdf =
+                  {https://www.usenix.org/system/files/osdi22-mohan.pdf},
+  slides =
+                  {https://www.usenix.org/sites/default/files/conference/protected-files/osdi22_slides_mohan.pdf},
+  video =	 {https://www.youtube.com/watch?v=T3ZctBwYxXY},
+  keywords =	 {ML}
 }
 
 @inproceedings{osdi24-squirrelfs,
-  author = {Hayley LeBlanc and Nathan Taylor and James Bornholt and Vijay Chidambaram},
-  title = {{SquirrelFS}: using the Rust compiler to check file-system crash consistency},
-  booktitle = {18th USENIX Symposium on Operating Systems Design and Implementation (OSDI 24)},
-  year = {2024},
-  pdf = {https://www.usenix.org/system/files/osdi24-leblanc.pdf},
-  slides = {https://www.usenix.org/system/files/osdi24_slides-leblanc.pdf},
-  video = {https://www.youtube.com/watch?v=_sp7IfxbBzI},
-  publisher = {USENIX Association},
-  month = jul,
+  author =	 {Hayley LeBlanc and Nathan Taylor and James Bornholt
+                  and Vijay Chidambaram},
+  title =	 {{SquirrelFS}: using the Rust compiler to check
+                  file-system crash consistency},
+  booktitle =	 {18th USENIX Symposium on Operating Systems Design
+                  and Implementation (OSDI 24)},
+  year =	 {2024},
+  pdf =
+                  {https://www.usenix.org/system/files/osdi24-leblanc.pdf},
+  slides =
+                  {https://www.usenix.org/system/files/osdi24_slides-leblanc.pdf},
+  video =	 {https://www.youtube.com/watch?v=_sp7IfxbBzI},
+  publisher =	 {USENIX Association},
+  month =	 jul,
+  keywords =	 {rust, file systems, persistent memory}
 }
 
 @inproceedings{PillaiEtAl17-CCFS,
@@ -397,8 +480,11 @@
   publisher =	 {USENIX Association},
   pdf =
                   {https://www.usenix.org/system/files/conference/fast17/fast17_pillai.pdf},
-  slides =	 {https://www.usenix.org/sites/default/files/conference/protected-files/fast17_slides_pillai.pdf},
-  audio =	 {https://2459d6dc103cb5933875-c0245c5c937c5dedcca3f1764ecc9b2f.ssl.cf2.rackcdn.com/fast17/pillai.mp3},
+  slides =
+                  {https://www.usenix.org/sites/default/files/conference/protected-files/fast17_slides_pillai.pdf},
+  audio =
+                  {https://2459d6dc103cb5933875-c0245c5c937c5dedcca3f1764ecc9b2f.ssl.cf2.rackcdn.com/fast17/pillai.mp3},
+  keywords =	 {file systems}
 }
 
 @inproceedings{poly19-gdpr,
@@ -414,19 +500,27 @@
   series =	 {Lecture Notes in Computer Science},
   publisher =	 {Springer},
   year =	 {2019},
-  pdf =		 {https://utsaslab.cs.utexas.edu/papers/poly19-gdpr.pdf},
-  group =	 {workshop}
+  pdf =
+                  {https://utsaslab.cs.utexas.edu/papers/poly19-gdpr.pdf},
+  group =	 {workshop},
+  keywords =	 {GDPR}
 }
 
 @InProceedings{RajuEtAl17-PebblesDB,
-  title = "{PebblesDB: Building Key-Value Stores using Fragmented Log-Structured Merge Trees}",
-  author = {Pandian Raju and Rohan Kadekodi and Vijay Chidambaram and Ittai Abraham},
-  booktitle = {Proceedings of the 26th ACM Symposium on Operating Systems Principles (SOSP '17)},
-  month = {October},
-  year = {2017},
-  address = {Shanghai, China},
-  pdf = {https://www.cs.utexas.edu/~vijay/papers/sosp17-pebblesdb.pdf},
-  slides = {https://www.cs.utexas.edu/~vijay/papers/pebblesdb-sosp17-slides.pdf},
+  title =	 "{PebblesDB: Building Key-Value Stores using
+                  Fragmented Log-Structured Merge Trees}",
+  author =	 {Pandian Raju and Rohan Kadekodi and Vijay
+                  Chidambaram and Ittai Abraham},
+  booktitle =	 {Proceedings of the 26th ACM Symposium on Operating
+                  Systems Principles (SOSP '17)},
+  month =	 {October},
+  year =	 {2017},
+  address =	 {Shanghai, China},
+  pdf =
+                  {https://www.cs.utexas.edu/~vijay/papers/sosp17-pebblesdb.pdf},
+  slides =
+                  {https://www.cs.utexas.edu/~vijay/papers/pebblesdb-sosp17-slides.pdf},
+  keywords =	 {key-value stores}
 }
 
 @InProceedings{LeeEtAl19-Recipe,
@@ -444,6 +538,7 @@
   slides =
                   {https://www.cs.utexas.edu/~vijay/papers/sosp19-recipe-slides.pdf},
   arxiv =	 {https://arxiv.org/abs/1909.13670},
+  keywords =	 {persistent memory, key-value stores}
 }
 
 @InProceedings{KadekodiEtAl19-SplitFS,
@@ -461,29 +556,40 @@
   slides =
                   {http://www.cs.utexas.edu/~vijay/papers/sosp19-splitfs-slides.pdf},
   arxiv =	 {https://arxiv.org/abs/1909.10123},
+  keywords =	 {persistent memory, key-value stores}
 }
 
 @inproceedings{taccl-nsdi23,
-  author = {Aashaka Shah and Vijay Chidambaram and Meghan Cowan and Saeed Maleki and Madan Musuvathi and Todd Mytkowicz and Jacob Nelson and Olli Saarikivi and Rachee Singh},
-  title = "{TACCL: Guiding Collective Algorithm Synthesis using Communication Sketches}",
-  booktitle = {20th {USENIX} Symposium on Networked Systems Design and Implementation, {NSDI} 2023},
-  year = {2023},
-  publisher = {{USENIX} Association},
-  month = apr,
-  pdf = {https://www.usenix.org/system/files/nsdi23-shah.pdf},
-  slides = {https://www.usenix.org/system/files/nsdi23_slides_shah.pdf},
-  video = {https://www.youtube.com/watch?v=yv07TOu8WQs}
+  author =	 {Aashaka Shah and Vijay Chidambaram and Meghan Cowan
+                  and Saeed Maleki and Madan Musuvathi and Todd
+                  Mytkowicz and Jacob Nelson and Olli Saarikivi and
+                  Rachee Singh},
+  title =	 "{TACCL: Guiding Collective Algorithm Synthesis using
+                  Communication Sketches}",
+  booktitle =	 {20th {USENIX} Symposium on Networked Systems Design
+                  and Implementation, {NSDI} 2023},
+  year =	 {2023},
+  publisher =	 {{USENIX} Association},
+  month =	 apr,
+  pdf =		 {https://www.usenix.org/system/files/nsdi23-shah.pdf},
+  slides =
+                  {https://www.usenix.org/system/files/nsdi23_slides_shah.pdf},
+  video =	 {https://www.youtube.com/watch?v=yv07TOu8WQs},
+  keywords =	 {ML}
 }
 
 @article{shastri20-gdpr,
-  author = {Supreeth Shastri and Vinay Banakar and Melissa Wasserman and Arun Kumar and Vijay Chidambaram},
-  title = {Understanding and Benchmarking the Impact of {GDPR} on Database Systems},
-  journal = {PVLDB},
-  volume = {13},
-  number = {7},
-  pages = {1064--1077},
-  year = {2020},
-  pdf = {http://www.vldb.org/pvldb/vol13/p1064-shastri.pdf},
+  author =	 {Supreeth Shastri and Vinay Banakar and Melissa
+                  Wasserman and Arun Kumar and Vijay Chidambaram},
+  title =	 {Understanding and Benchmarking the Impact of {GDPR}
+                  on Database Systems},
+  journal =	 {PVLDB},
+  volume =	 {13},
+  number =	 {7},
+  pages =	 {1064--1077},
+  year =	 {2020},
+  pdf =		 {http://www.vldb.org/pvldb/vol13/p1064-shastri.pdf},
+  keywords =	 {GDPR, databases}
 }
 
 @article{vldb21-datastalls,
@@ -497,6 +603,7 @@
   pages =	 {771--784},
   year =	 {2021},
   pdf =		 {http://www.vldb.org/pvldb/vol14/p771-mohan.pdf},
+  keywords =	 {ML}
 }
 
 @InProceedings{KadekodiEtAl21-WineFS,
@@ -509,25 +616,28 @@
                   Systems Principles (SOSP '21)},
   month =	 {October},
   year =	 {2021},
-  pdf =		 {https://www.pdl.cmu.edu/PDL-FTP/NVM/wine-sosp21.pdf}
+  pdf =		 {https://www.pdl.cmu.edu/PDL-FTP/NVM/wine-sosp21.pdf},
+  keywords =	 {file systems, persistent memory}
 }
 
 @article{IstvanPC21-gdpr,
-  author       = {Zsolt Istv{\'{a}}n and
-                  Soujanya Ponnapalli and
-                  Vijay Chidambaram},
-  title        = {Software-Defined Data Protection: Low Overhead Policy Compliance at
-                  the Storage Layer is Within Reach!},
-  journal      = {Proceedings of the {VLDB} Endowment},
-  volume       = {14},
-  number       = {7},
-  pages        = {1167--1174},
-  year         = {2021},
-  pdf          = {http://www.vldb.org/pvldb/vol14/p1167-istvan.pdf},
-  doi          = {10.14778/3450980.3450986},
-  timestamp    = {Tue, 16 Aug 2022 23:06:06 +0200},
-  biburl       = {https://dblp.org/rec/journals/pvldb/IstvanPC21.bib},
-  bibsource    = {dblp computer science bibliography, https://dblp.org}
+  author =	 {Zsolt Istv{\'{a}}n and Soujanya Ponnapalli and Vijay
+                  Chidambaram},
+  title =	 {Software-Defined Data Protection: Low Overhead
+                  Policy Compliance at the Storage Layer is Within
+                  Reach!},
+  journal =	 {Proceedings of the {VLDB} Endowment},
+  volume =	 {14},
+  number =	 {7},
+  pages =	 {1167--1174},
+  year =	 {2021},
+  pdf =		 {http://www.vldb.org/pvldb/vol14/p1167-istvan.pdf},
+  doi =		 {10.14778/3450980.3450986},
+  timestamp =	 {Tue, 16 Aug 2022 23:06:06 +0200},
+  biburl =	 {https://dblp.org/rec/journals/pvldb/IstvanPC21.bib},
+  bibsource =	 {dblp computer science bibliography,
+                  https://dblp.org},
+  keywords =	 {GDPR}
 }
 
 @article{yige19-tos-txfs,
@@ -547,7 +657,8 @@
   biburl =	 {https://dblp.org/rec/journals/tos/HuZNKCCW19.bib},
   bibsource =	 {dblp computer science bibliography,
                   https://dblp.org},
-  pdf =		 {https://dl.acm.org/doi/pdf/10.1145/3318159}
+  pdf =		 {https://dl.acm.org/doi/pdf/10.1145/3318159},
+  keywords =	 {file systems}
 }
 
 @article{mohan19-tos-crashmonkey,
@@ -566,7 +677,8 @@
   biburl =	 {https://dblp.org/rec/journals/tos/MohanMPRC19.bib},
   bibsource =	 {dblp computer science bibliography,
                   https://dblp.org},
-  pdf =		 {https://dl.acm.org/doi/pdf/10.1145/3320275}
+  pdf =		 {https://dl.acm.org/doi/pdf/10.1145/3320275},
+  keywords =	 {file ssytems}
 }
 
 @article{alagappan18-tos-par,
@@ -588,7 +700,8 @@
                   {https://dblp.org/rec/journals/tos/AlagappanGLACAA18.bib},
   bibsource =	 {dblp computer science bibliography,
                   https://dblp.org},
-  pdf =		 {https://dl.acm.org/doi/pdf/10.1145/3241062}
+  pdf =		 {https://dl.acm.org/doi/pdf/10.1145/3241062},
+  keywords =	 {consensus, distributed systems},
 }
 
 @article{login18-txfs,
@@ -607,26 +720,7 @@
   biburl =
                   {https://dblp.org/rec/journals/usenix-login/HuZNKCCW18.bib},
   bibsource =	 {dblp computer science bibliography,
-                  https://dblp.org}
-}
-
-@article{ccfs-tos,
-  author       = {Thanumalayan Sankaranarayana Pillai and
-                  Ramnatthan Alagappan and
-                  Lanyue Lu and
-                  Vijay Chidambaram and
-                  Andrea C. Arpaci{-}Dusseau and
-                  Remzi H. Arpaci{-}Dusseau},
-  title        = {Application Crash Consistency and Performance with {CCFS}},
-  journal      = {{ACM} Transactions on Storage},
-  volume       = {13},
-  number       = {3},
-  pages        = {19:1--19:29},
-  year         = {2017},
-  pdf          = {https://dl.acm.org/doi/pdf/10.1145/3119897},
-  doi          = {10.1145/3119897},
-  timestamp    = {Sun, 12 Nov 2023 02:17:35 +0100},
-  biburl       = {https://dblp.org/rec/journals/tos/PillaiALCAA17.bib},
-  bibsource    = {dblp computer science bibliography, https://dblp.org}
+                  https://dblp.org},
+  keywords =	 {file systems},
 }
 
