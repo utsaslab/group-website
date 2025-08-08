@@ -7,11 +7,11 @@ permalink: /publications-by-topic/
 
 <div markdown="0">
 {% for keyword in site.data.sorted_keywords %}
-<details class="year-details" open>
+<details class="year-details">
   <summary class="year-heading">{{ keyword }}</summary>
   <div class="year-list">
     {% for entry in site.data.publications_by_keyword[keyword] %}
-      {% include publication_entry.html %}
+      {{ forloop.index }}. {% include publication_entry.html %}
     {% endfor %}
   </div>
 </details>
