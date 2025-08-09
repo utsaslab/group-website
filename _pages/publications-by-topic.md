@@ -12,6 +12,14 @@ permalink: /publications-by-topic/
     margin-top:10px;
     margin-bottom:30px;
 }
+.publication-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+.publication-number {
+  padding-right: 10px;
+}
 </style>
 
 <div markdown="0">
@@ -21,7 +29,10 @@ permalink: /publications-by-topic/
   <div class="year-list">
     {% assign total_pubs = site.data.publications_by_keyword[keyword] | size %}
     {% for entry in site.data.publications_by_keyword[keyword] %}
-      {{ total_pubs | minus: forloop.index0 }}. {% include publication_entry.html %}
+      <div class="publication-item">
+        <div class="publication-number">{{ total_pubs | minus: forloop.index0 }}.</div>
+        <div class="publication-content">{% include publication_entry.html %}</div>
+      </div>
     {% endfor %}
   </div>
 </details>
