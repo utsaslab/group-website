@@ -48,7 +48,7 @@ permalink: /team/
 <div class="col-sm-2">
 <img src="{{ site.url }}{{ site.baseurl }}/images/{{ member.photo }}" width="100%" style="max-width:250px"/>
 </div>
-<div class="col-sm-4 col-xs-12">
+<div class="col-sm-4 col-xs-12" markdown="0">
   <h4>{% if member.website %}<a href="{{ member.website }}" target="_blank">{{ member.name }}</a>{% else %}{{ member.name }}{% endif %}</h4>
   <i>{{ member.info }}<br></i>
 
@@ -101,22 +101,12 @@ permalink: /team/
 <div class="col-sm-2">
 <img src="{{ site.url }}{{ site.baseurl }}/images/{{ member.photo }}" width="100%" style="max-width:250px"/>
 </div>
-<div class="col-sm-4 col-xs-12">
-  <h4>{% if member.website %}<a href="{{ member.website }}" target="_blank">{{ member.name }}</a>{% else %}{{ member.name }}{% endif %}</h4>
-  {% if member.duration contains 'PhD' %}
-    {% unless member.duration contains 'co-advised' %}
-  <i>PhD #{{ phd_counter }}</i><br>
-    {% assign phd_counter = phd_counter | minus: 1 %}
-    {% else %}
-  <i>{{ member.duration }}</i><br>
-    {% endunless %}
-  {% else %}
-  <i>{{ member.duration }}</i><br>
-  {% endif %}
-  <i>Role: {{ member.info }}</i>
-  <ul style="overflow: hidden">
-  </ul>
-</div>
+  <div class="col-sm-4 col-xs-12" markdown="0">
+    <h4>{% if member.website %}<a href="{{ member.website }}" target="_blank">{{ member.name }}</a>{% else %}{{ member.name }}{% endif %}</h4>
+    <i>{% if member.duration contains 'PhD' %}{% unless member.duration contains 'co-advised' %}PhD #{{ phd_counter }}{% assign phd_counter = phd_counter | minus: 1 %}{% else %}{{ member.duration }}{% endunless %}{% else %}{{ member.duration }}{% endif %}<br>Role: {{ member.info }}</i>
+    <ul style="overflow: hidden">
+    </ul>
+  </div>
 
 {% assign number_printed = number_printed | plus: 1 %}
 
