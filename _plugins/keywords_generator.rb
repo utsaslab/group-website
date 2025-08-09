@@ -51,7 +51,7 @@ module Jekyll
           pub_hash['author_array'] = author_array
         end
 
-        keywords = entry.keywords.to_s.split(',').map(&:strip)
+        keywords = entry.keywords.to_s.split(',').map { |k| k.strip.split.map(&:capitalize).join(' ') }
         keywords.each do |keyword|
           pubs_by_keyword[keyword] << pub_hash
         end
