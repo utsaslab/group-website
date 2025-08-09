@@ -62,7 +62,7 @@ pre{
   {% endif %}
   {% if entry.award %}
     {% assign award_clean = entry.award | remove: '"' | unescape_tilde | remove: open_brace | remove: close_brace %}
-    <br/>🏆 <span style="color: yellow; font-weight: bold;">{{ award_clean | capitalize }}</span>
+    <br/>🏆 <span class="text-warning font-weight-bold">{{ award_clean | capitalize }}</span>
   {% endif %}
   </div>
 
