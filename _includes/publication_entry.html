@@ -92,25 +92,30 @@ pre{
 <a href="{{ entry.audio | unescape_tilde }}" target="_blank"><button class="btn btn-media btm-sm">AUDIO</button></a>
 {% endif %}
 
-{% if entry.type == 'unpublished' or entry.type == 'article' or  entry.type == 'thesis' or entry.type == 'inproceedings' or entry.type == 'report' %}
-<button class="btn btn-danger btm-sm"  onclick="toggleBibtex('{{entry.key}}')">BIB</button>
+{%- assign id_suffix = '' -%}
+{%- if forloop.parentloop -%}
+  {%- assign id_suffix = '-' | append: forloop.parentloop.index0 | append: '-' | append: forloop.index0 -%}
+{%- elsif forloop -%}
+  {%- assign id_suffix = '-' | append: forloop.index0 -%}
+{%- endif -%}
+
+<button class="btn btn-danger btm-sm"  onclick="toggleBibtex('{{entry.key}}{{ id_suffix }}')">BIB</button>
+
+{% if entry.abstract %}
+<button class="btn btn-warning btm-sm"  onclick="toggleAbstract('{{entry.key}}{{ id_suffix }}')">ABSTRACT</button>
 {% endif %}
 
 {% if entry.abstract %}
-<button class="btn btn-warning btm-sm"  onclick="toggleAbstract('{{entry.key}}')">ABSTRACT</button>
-{% endif %}
-
-{% if entry.abstract %}
-<div id="a{{entry.key}}" style="display: none; background-color:black; border-radius:5px; padding:10px; margin-bottom:20px;">
+<div id="a{{entry.key}}{{ id_suffix }}" style="display: none; background-color:black; border-radius:5px; padding:10px; margin-bottom:20px;">
 <pre>{{ entry.bibtex | unescape_tilde | remove: "entry.abstract" }}</pre>
 </div>
 {% else %}
-<div id="a{{entry.key}}" style="display: none; background-color:black; border-radius:5px; padding:10px; margin-bottom:20px;">
+<div id="a{{entry.key}}{{ id_suffix }}" style="display: none; background-color:black; border-radius:5px; padding:10px; margin-bottom:20px;">
 <pre>{{ entry.bibtex | unescape_tilde }}</pre>
 </div>
 {% endif %}
 
-<div id="b{{entry.key}}" style="display: none; background-color:black; border-radius:5px; padding:10px; margin-bottom:20px;">
+<div id="b{{entry.key}}{{ id_suffix }}" style="display: none; background-color:black; border-radius:5px; padding:10px; margin-bottom:20px;">
 <pre>{{ entry.abstract }}</pre>
 </div>
 </div>
