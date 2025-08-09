@@ -28,7 +28,7 @@ permalink: /publications-by-topic/
 <div markdown="0">
 {% for keyword in site.data.sorted_keywords %}
 <details class="jumbotron">
-  <summary><h3 style="font-size: 1.2rem;">{{ keyword }}</h3></summary>
+  <summary style="font-size: 1.2rem; font-weight: 600;">{{ keyword }}</summary>
   <div class="year-list">
     {% assign total_pubs = site.data.publications_by_keyword[keyword] | size %}
     {% for entry in site.data.publications_by_keyword[keyword] %}
