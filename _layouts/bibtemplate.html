@@ -58,6 +58,9 @@ pre{
   {% elsif entry.publisher %}
     <em>{{ entry.publisher | remove: '"' | unescape_tilde }}</em>
   {% endif %}
+  {% if entry.award %}
+    <br/>🏆 {{ entry.award | remove: '"' | unescape_tilde | remove: '{' | remove: '}' }}
+  {% endif %}
   </div>
 
   <!-- You can use the below to make your name bold -->
