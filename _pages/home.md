@@ -24,3 +24,7 @@ Research group out at lunch in 2018!
 </div>
 <br/>
 
+### Recent Publications
+
+{% bibliography --template bibtemplate --max 3 %}
+
