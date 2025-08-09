@@ -54,7 +54,8 @@ pre{
     <em>{{ entry.publisher | remove: '"' | unescape_tilde | remove: open_brace | remove: close_brace }}</em>
   {% endif %}
   {% if entry.award %}
-    <br/>🏆 {{ entry.award | remove: '"' | unescape_tilde | remove: open_brace | remove: close_brace }}
+    {% assign award_clean = entry.award | remove: '"' | unescape_tilde | remove: open_brace | remove: close_brace %}
+    <br/>🏆 <span style="color: yellow; font-weight: bold;">{{ award_clean | capitalize }}</span>
   {% endif %}
   </div>
 
