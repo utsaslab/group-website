@@ -21,21 +21,21 @@ module Jekyll
         pub_hash = {}
 
         # Simple fields
-        pub_hash['title'] = entry.title.to_s if entry.respond_to?(:title)
-        pub_hash['year'] = entry.year.to_s if entry.respond_to?(:year)
-        pub_hash['volume'] = entry.volume.to_s if entry.respond_to?(:volume)
-        pub_hash['number'] = entry.number.to_s if entry.respond_to?(:number)
-        pub_hash['booktitle'] = entry.booktitle.to_s if entry.respond_to?(:booktitle)
-        pub_hash['journal'] = entry.journal.to_s if entry.respond_to?(:journal)
-        pub_hash['publisher'] = entry.publisher.to_s if entry.respond_to?(:publisher)
-        pub_hash['pdf'] = entry.pdf.to_s if entry.respond_to?(:pdf)
-        pub_hash['doi'] = entry.doi.to_s if entry.respond_to?(:doi)
-        pub_hash['slides'] = entry.slides.to_s if entry.respond_to?(:slides)
-        pub_hash['video'] = entry.video.to_s if entry.respond_to?(:video)
-        pub_hash['audio'] = entry.audio.to_s if entry.respond_to?(:audio)
-        pub_hash['abstract'] = entry.abstract.to_s if entry.respond_to?(:abstract)
-        pub_hash['type'] = entry.type.to_s
-        pub_hash['file'] = entry.file.to_s if entry.respond_to?(:file)
+        pub_hash['title'] = entry.title.to_s if entry.respond_to?(:title) && entry.title
+        pub_hash['year'] = entry.year.to_s if entry.respond_to?(:year) && entry.year
+        pub_hash['volume'] = entry.volume.to_s if entry.respond_to?(:volume) && entry.volume
+        pub_hash['number'] = entry.number.to_s if entry.respond_to?(:number) && entry.number
+        pub_hash['booktitle'] = entry.booktitle.to_s if entry.respond_to?(:booktitle) && entry.booktitle
+        pub_hash['journal'] = entry.journal.to_s if entry.respond_to?(:journal) && entry.journal
+        pub_hash['publisher'] = entry.publisher.to_s if entry.respond_to?(:publisher) && entry.publisher
+        pub_hash['pdf'] = entry.pdf.to_s if entry.respond_to?(:pdf) && entry.pdf
+        pub_hash['doi'] = entry.doi.to_s if entry.respond_to?(:doi) && entry.doi
+        pub_hash['slides'] = entry.slides.to_s if entry.respond_to?(:slides) && entry.slides
+        pub_hash['video'] = entry.video.to_s if entry.respond_to?(:video) && entry.video
+        pub_hash['audio'] = entry.audio.to_s if entry.respond_to?(:audio) && entry.audio
+        pub_hash['abstract'] = entry.abstract.to_s if entry.respond_to?(:abstract) && entry.abstract
+        pub_hash['type'] = entry.type.to_s if entry.respond_to?(:type) && entry.type
+        pub_hash['file'] = entry.file.to_s if entry.respond_to?(:file) && entry.file
 
 
         # Complex fields
@@ -51,7 +51,10 @@ module Jekyll
           pub_hash['author_array'] = author_array
         end
 
-        keywords = entry.keywords.to_s.split(',').map { |k| k.strip.split.map(&:capitalize).join(' ') }
+        keywords = entry.keywords.to_s.split(',').map do |k|
+          clean = k.strip
+          clean == clean.upcase ? clean : clean.split.map(&:capitalize).join(' ')
+        end
         keywords.each do |keyword|
           pubs_by_keyword[keyword] << pub_hash
         end
