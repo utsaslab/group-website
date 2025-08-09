@@ -11,7 +11,11 @@ module Jekyll
 
       return unless File.exist?(bib_file)
 
-      bib = BibTeX.open(bib_file)
+      # Use BibTeX's LaTeX filter to ensure names and other fields
+      # with LaTeX-encoded characters are converted to Unicode. Without
+      # this, author names with accents (e.g., "Jos{\'e}") would appear
+      # with the raw LaTeX commands on the publications-by-topic page.
+      bib = BibTeX.open(bib_file, filter: [:latex])
       pubs_by_keyword = Hash.new { |h, k| h[k] = [] }
 
       bib.each do |entry|
@@ -46,7 +50,9 @@ module Jekyll
         if entry.respond_to?(:author) && entry.author
           author_array = []
           entry.author.each do |author|
-            author_array << { 'first' => author.first, 'last' => author.last }
+            # Convert author fields to strings so any LaTeX accents are
+            # properly rendered as Unicode in the templates.
+            author_array << { 'first' => author.first.to_s, 'last' => author.last.to_s }
           end
           pub_hash['author_array'] = author_array
         end
