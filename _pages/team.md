@@ -105,15 +105,15 @@ permalink: /team/
   <h4>{% if member.website %}<a href="{{ member.website }}" target="_blank">{{ member.name }}</a>{% else %}{{ member.name }}{% endif %}</h4>
   {% if member.duration contains 'PhD' %}
     {% unless member.duration contains 'co-advised' %}
-  <i>PhD #{{ phd_counter }}</i><br>
+  <i style="display:block;">PhD #{{ phd_counter }}</i>
     {% assign phd_counter = phd_counter | minus: 1 %}
     {% else %}
-  <i>{{ member.duration }}</i><br>
+  <i style="display:block;">{{ member.duration }}</i>
     {% endunless %}
   {% else %}
-  <i>{{ member.duration }}</i><br>
+  <i style="display:block;">{{ member.duration }}</i>
   {% endif %}
-  <i>Role: {{ member.info }}</i>
+  <i style="display:block;">Role: {{ member.info }}</i>
   <ul style="overflow: hidden">
   </ul>
 </div>
