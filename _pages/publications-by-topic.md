@@ -20,12 +20,15 @@ permalink: /publications-by-topic/
 .publication-number {
   padding-right: 10px;
 }
+.year-list {
+  margin-top: 10px;
+}
 </style>
 
 <div markdown="0">
 {% for keyword in site.data.sorted_keywords %}
 <details class="jumbotron">
-  <summary>{{ keyword }}</summary>
+  <summary><h3 style="font-size: 1.2rem;">{{ keyword }}</h3></summary>
   <div class="year-list">
     {% assign total_pubs = site.data.publications_by_keyword[keyword] | size %}
     {% for entry in site.data.publications_by_keyword[keyword] %}
