@@ -29,7 +29,9 @@ pre{
 
 <div class="publication-entry">
   <div class="text-justify">
-    <strong>{{ entry.title | unescape_tilde }}</strong>
+    {%- assign open_brace = '{' -%}
+    {%- assign close_brace = '}' -%}
+    <strong>{{ entry.title | unescape_tilde | remove: open_brace | remove: close_brace }}</strong>
   {% if entry.author_array %}
     <br/>
     {% for author in entry.author_array %}
@@ -52,11 +54,15 @@ pre{
   {% endif %}
   <br/>
   {% if entry.booktitle %}
-    <em>{{ entry.booktitle | remove: '"' | unescape_tilde }}</em>
+    <em>{{ entry.booktitle | remove: '"' | unescape_tilde | remove: open_brace | remove: close_brace }}</em>
   {% elsif entry.journal %}
-    <em>{{ entry.journal | remove: '"' | unescape_tilde }}{% if entry.volume %}, Volume {{ entry.volume }}{% endif %}{% if entry.number %}, Issue {{ entry.number }}{% endif %}</em>
+    <em>{{ entry.journal | remove: '"' | unescape_tilde | remove: open_brace | remove: close_brace }}{% if entry.volume %}, Volume {{ entry.volume }}{% endif %}{% if entry.number %}, Issue {{ entry.number }}{% endif %}</em>
   {% elsif entry.publisher %}
-    <em>{{ entry.publisher | remove: '"' | unescape_tilde }}</em>
+    <em>{{ entry.publisher | remove: '"' | unescape_tilde | remove: open_brace | remove: close_brace }}</em>
+  {% endif %}
+  {% if entry.award %}
+    {% assign award_clean = entry.award | remove: '"' | unescape_tilde | remove: open_brace | remove: close_brace %}
+    <br/>🏆 <span class="text-warning font-weight-bold">{{ award_clean | capitalize }}</span>
   {% endif %}
   </div>
 

@@ -53,6 +53,10 @@ pre{
   {% elsif entry.publisher %}
     <em>{{ entry.publisher | remove: '"' | unescape_tilde | remove: open_brace | remove: close_brace }}</em>
   {% endif %}
+  {% if entry.award %}
+    {% assign award_clean = entry.award | remove: '"' | unescape_tilde | remove: open_brace | remove: close_brace %}
+    <br/>🏆 <span class="text-warning font-weight-bold">{{ award_clean | capitalize }}</span>
+  {% endif %}
   </div>
 
   <!-- You can use the below to make your name bold -->
