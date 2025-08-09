@@ -1,3 +1,15 @@
+- date: Aug 2025
+  headline: "Launching a new Distributed Systems in UTCS Online Masters"
+
+- date: Mar 2025
+  headline: "[Tigon](https://www.usenix.org/system/files/osdi25-huang-yibo.pdf) and [PoWER](https://www.usenix.org/system/files/osdi25-leblanc.pdf) were accepted to OSDI 25!"
+
+- date: Jan 2025
+  headline: "[GPEmu](https://vldb.org/pvldb/vol18/p1919-wang.pdf) got accepted to VLDB 25!"
+
+- date: Oct 2025
+  headline: "[Pasha](https://www.cs.utexas.edu/~witchel/pubs/huang25cidr-pasha.pdf) was accepted to CIDR 25!"
+
 - date: Aug 2023
   headline: "UTCS and the Daily Texan covered our work on Chipmunk."
 
