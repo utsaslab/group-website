@@ -48,5 +48,3 @@ permalink: /publications/
   </tr>
 </table>
 
-<script async defer src="https://buttons.github.io/buttons.js"></script>
-

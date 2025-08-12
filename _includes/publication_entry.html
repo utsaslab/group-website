@@ -89,10 +89,6 @@ pre{
 {% if entry.slides %}
 <a href="{{ entry.slides | unescape_tilde }}" target="_blank"><button class="btn btn-info btm-sm">SLIDES</button></a>
 {% endif %}
-{% if entry.software %}
-  {% assign repo_name = entry.software | remove: 'https://github.com/' %}
-  <a class="github-button" href="{{ entry.software | unescape_tilde }}" data-icon="octicon-star" data-show-count="true" aria-label="Star {{ repo_name }} on GitHub">Star</a>
-{% endif %}
 {% if entry.video %}
 <a href="{{ entry.video | unescape_tilde }}" target="_blank"><button class="btn btn-media btm-sm">VIDEO</button></a>
 {% endif %}
@@ -111,6 +107,11 @@ pre{
 
 {% if entry.abstract %}
 <button class="btn btn-warning btm-sm"  onclick="toggleAbstract('{{entry.key}}{{ id_suffix }}')">ABSTRACT</button>
+{% endif %}
+
+{% if entry.software %}
+  {% assign repo_name = entry.software | remove: 'https://github.com/' %}
+  <a class="github-button" href="{{ entry.software | unescape_tilde }}" data-icon="octicon-star" data-show-count="true" aria-label="Star {{ repo_name }} on GitHub">Star</a>
 {% endif %}
 
 {% if entry.abstract %}
@@ -146,4 +147,3 @@ function toggleAbstract(key) {
     }
 }
 </script>
-<script async defer src="https://buttons.github.io/buttons.js"></script>
