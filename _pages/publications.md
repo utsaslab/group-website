@@ -31,6 +31,10 @@ permalink: /publications/
     <td style="text-align: right;">Presentation slides</td>
   </tr>
   <tr>
+    <td><a class="github-button" href="https://github.com/github/docs" data-icon="octicon-star" data-show-count="true" aria-label="Star github/docs on GitHub">Star</a></td>
+    <td style="text-align: right;">GitHub repository with star count</td>
+  </tr>
+  <tr>
     <td><button class="btn btn-media btm-sm">VIDEO</button></td>
     <td style="text-align: right;">Recorded presentation or related video</td>
   </tr>
@@ -43,4 +47,6 @@ permalink: /publications/
     <td style="text-align: right;">BibTeX citation</td>
   </tr>
 </table>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
 
