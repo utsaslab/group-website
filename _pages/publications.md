@@ -31,8 +31,8 @@ permalink: /publications/
     <td style="text-align: right;">Presentation slides</td>
   </tr>
   <tr>
-    <td><a class="github-button" href="https://github.com/github/docs" data-icon="octicon-star" data-show-count="true" aria-label="Star github/docs on GitHub">Star</a></td>
-    <td style="text-align: right;">GitHub repository with star count</td>
+    <td><button class="btn btn-code btm-sm">CODE</button></td>
+    <td style="text-align: right;">GitHub repository</td>
   </tr>
   <tr>
     <td><button class="btn btn-media btm-sm">VIDEO</button></td>

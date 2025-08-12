@@ -43,6 +43,30 @@ img {
     border-color: #6f42c1;
 }
 
+/* Orange code buttons for GitHub repository links */
+.btn-code {
+    color: #fff;
+    background-color: #f46b01;
+    border-color: #f46b01;
+}
+
+.btn-code:hover,
+.btn-code:focus,
+.btn-code:active,
+.btn-code.active,
+.show > .btn-code.dropdown-toggle {
+    color: #fff;
+    background-color: darken(#f46b01, 7.5%);
+    border-color: darken(#f46b01, 10%);
+}
+
+.btn-code:disabled,
+.btn-code.disabled {
+    color: #fff;
+    background-color: #f46b01;
+    border-color: #f46b01;
+}
+
 .container-fluid {
   max-width: 800px;
 }

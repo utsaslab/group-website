@@ -117,8 +117,7 @@ pre{
 {% endif %}
 
 {% if entry.software %}
-  {% assign repo_name = entry.software | remove: 'https://github.com/' %}
-  <a class="github-button" href="{{ entry.software | unescape_tilde }}" data-icon="octicon-star" data-show-count="true" aria-label="Star {{ repo_name }} on GitHub">Star</a>
+  <a href="{{ entry.software | unescape_tilde }}" target="_blank"><button class="btn btn-code btm-sm">CODE</button></a>
 {% endif %}
 
 {% if entry.abstract %}
