@@ -18,35 +18,43 @@ years: [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]
 {% capture preprints %}{% bibliography --template bibtemplate --query @unpublished %}{% endcapture %}
 {% assign preprints = preprints | strip %}
 {% if preprints contains 'publication-entry' %}
+
 <details class="jumbotron">
 <summary><h3 style="font-size: 1.2rem; font-weight: bold; margin: 0;">Preprints</h3></summary>
 {{ preprints }}
 </details>
+
 {% endif %}
 
 {% capture conf %}{% bibliography --template bibtemplate --query @inproceedings[group != workshop] %}{% endcapture %}
 {% assign conf = conf | strip %}
 {% unless conf == "" %}
+
 <details class="jumbotron">
 <summary><h3 style="font-size: 1.2rem; font-weight: bold; margin: 0;">Refereed conference proceedings</h3></summary>
 {{ conf }}
 </details>
+
 {% endunless %}
 
 {% capture journal %}{% bibliography --template bibtemplate --query @article %}{% endcapture %}
 {% assign journal = journal | strip %}
 {% unless journal == "" %}
+
 <details class="jumbotron">
 <summary><h3 style="font-size: 1.2rem; font-weight: bold; margin: 0;">Refereed journal articles</h3></summary>
 {{ journal }}
 </details>
+
 {% endunless %}
 
 {% capture workshop %}{% bibliography --template bibtemplate --query @*[group = workshop] %}{% endcapture %}
 {% assign workshop = workshop | strip %}
 {% unless workshop == "" %}
+
 <details class="jumbotron">
 <summary><h3 style="font-size: 1.2rem; font-weight: bold; margin: 0;">Workshop papers</h3></summary>
 {{ workshop }}
 </details>
+
 {% endunless %}
