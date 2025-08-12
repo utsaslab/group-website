@@ -1,110 +1,110 @@
 name,affiliation
-M. Frans Kaashoek,"MIT"
-Nickolai Zeldovich,"MIT"
-Haibo Chen 0001,"Shanghai Jiao Tong University"
+M. Frans Kaashoek,MIT
+Nickolai Zeldovich,MIT
+Haibo Chen,Shanghai Jiao Tong University
 Ion Stoica,"University of California, Berkeley"
-Gregory R. Ganger,"CMU"
+Gregory R. Ganger,CMU
 Lidong Zhou,"Microsoft Research Asia, Beijing"
-Andrea C. Arpaci-Dusseau,"UW Madison"
-Remzi H. Arpaci-Dusseau,"UW Madison"
-Henry M. Levy,"UW Seattle"
+Andrea C. Arpaci-Dusseau,UW Madison
+Remzi H. Arpaci-Dusseau,UW Madison
+Henry M. Levy,UW Seattle
 Jason Flinn,Meta
-David Mazières,"Stanford"
-Fan Yang 0024,"Microsoft Research Asia, Beijing"
-Ding Yuan 0004,"University of Toronto"
-Barbara Liskov,"MIT"
-Jason Nieh,"Columbia"
-Shan Lu 0001,"Microsoft Research, Redmond"
-Thomas E. Anderson,"UW Seattle"
-Emmett Witchel,"UT Austin"
-Junfeng Yang (disambiguation),"Columbia"
+David Mazières,Stanford
+Fan Yang,"Microsoft Research Asia, Beijing"
+Ding Yuan,University of Toronto
+Barbara Liskov,MIT
+Jason Nieh,Columbia
+Shan Lu,"Microsoft Research, Redmond"
+Thomas E. Anderson,UW Seattle
+Emmett Witchel,UT Austin
+Junfeng Yang,Columbia
 Amin Vahdat,Google
-Brian N. Bershad,"UW Seattle"
-Rong Chen 0001,"Shanghai Jiao Tong University"
-Yuanyuan Zhou 0001,"University of California, San Diego"
-Robert Morris 0005,"MIT"
-Lorenzo Alvisi,"Cornell"
-Taesoo Kim,"Georgia Institute of Technology"
-Arvind Krishnamurthy,"UW Seattle"
-Simon Peter 0001,"UW Seattle"
-Jon Howell,"VMware Research"
-Sanidhya Kashyap,"EPFL"
+Brian N. Bershad,UW Seattle
+Rong Chen,Shanghai Jiao Tong University
+Yuanyuan Zhou,"University of California, San Diego"
+Robert Morris,MIT
+Lorenzo Alvisi,Cornell
+Taesoo Kim,Georgia Institute of Technology
+Arvind Krishnamurthy,UW Seattle
+Simon Peter,UW Seattle
+Jon Howell,VMware Research
+Sanidhya Kashyap,EPFL
 Roger M. Needham,"Microsoft Research, Cambridge"
-Bryan Ford,"EPFL"
-Miguel Castro 0001,"Microsoft Research, Cambridge"
-Larry L. Peterson,"Princeton"
+Bryan Ford,EPFL
+Miguel Castro,"Microsoft Research, Cambridge"
+Larry L. Peterson,Princeton
 Scott Shenker,"University of California, Berkeley"
-Xi Wang 0005,"UW Seattle"
-Xin Jin 0008,"Peking University"
-Peter Druschel,"Max Planck Institute for Software Systems"
-Eddie Kohler,"Harvard"
-Michael Dahlin,"Google"
-Chunqiang Tang,"Meta"
-Kaushik Veeraraghavan,"Meta"
-Michael Stumm,"University of Toronto"
-Manos Kapritsos,"University of Michigan"
-Wyatt Lloyd,"Princeton"
-Matei Zaharia,"Stanford"
-Peng Huang 0005,"University of Michigan"
-Dawson R. Engler,"Stanford"
-Peter M. Chen,"University of Michigan"
-Tianyin Xu,"UIUC"
-Mao Yang 0004,"Microsoft Research Asia, Beijing"
+Xi Wang,UW Seattle
+Xin Jin,Peking University
+Peter Druschel,Max Planck Institute for Software Systems
+Eddie Kohler,Harvard
+Michael Dahlin,Google
+Chunqiang Tang,Meta
+Kaushik Veeraraghavan,Meta
+Michael Stumm,University of Toronto
+Manos Kapritsos,University of Michigan
+Wyatt Lloyd,Princeton
+Matei Zaharia,Stanford
+Peng Huang,University of Michigan
+Dawson R. Engler,Stanford
+Peter M. Chen,University of Michigan
+Tianyin Xu,UIUC
+Mao Yang,"Microsoft Research Asia, Beijing"
 Chris Hawblitzel,"Microsoft Research, Redmond"
 Lingxiao Ma,"Microsoft Research Asia, Beijing"
-Tej Chajed,"UW Madison"
-George Candea,"EPFL"
-Vijay Chidambaram,"UT Austin"
-Christoforos E. Kozyrakis,"Stanford"
-Marcos K. Aguilera,"VMware"
-Guoqing Harry Xu,"UCLA"
-David R. Cheriton,"Stanford"
-Baris Kasikci,"UW Seattle"
-Andreas Haeberlen,"University of Pennsylvania"
-Kang Chen (disambiguation),"Shanghai Jiao Tong University"
+Tej Chajed,UW Madison
+George Candea,EPFL
+Vijay Chidambaram,UT Austin
+Christoforos E. Kozyrakis,Stanford
+Marcos K. Aguilera,VMware
+Guoqing Harry Xu,UCLA
+David R. Cheriton,Stanford
+Baris Kasikci,UW Seattle
+Andreas Haeberlen,University of Pennsylvania
+Kang Chen,Shanghai Jiao Tong University
 Irene Zhang,"Microsoft Research, Redmond"
-Steve D. Gribble,"UW Seattle"
+Steve D. Gribble,UW Seattle
 Sylvia Ratnasamy,"University of California, Berkeley"
-Timothy Roscoe,"ETH Zurich"
-Ronghui Gu,"Columbia"
-Gerald J. Popek,"UCLA"
-Changwoo Min,"Igalia"
+Timothy Roscoe,ETH Zurich
+Ronghui Gu,Columbia
+Gerald J. Popek,UCLA
+Changwoo Min,Igalia
 Dan R. K. Ports,"Microsoft Research, Redmond"
 Jilong Xue,"Microsoft Research, Redmond"
 Madan Musuvathi,"Microsoft Research, Redmond"
-John K. Ousterhout,"Stanford"
+John K. Ousterhout,Stanford
 Ricardo Bianchini,"Microsoft Research, Redmond"
-Haryadi S. Gunawi,"University of Chicago"
-Mahadev Satyanarayanan,"CMU"
+Haryadi S. Gunawi,University of Chicago
+Mahadev Satyanarayanan,CMU
 Willy Zwaenepoel,"University of Sydney, NSW"
-David K. Gifford,"MIT"
-Rachit Agarwal 0001,"Cornell"
-Yang Wang 0009,"Ohio State University"
-David G. Andersen,"CMU"
-Adam Belay,"MIT"
-Asaf Cidon,"Columbia"
-Bryan Parno,"CMU"
-Michael Kaminsky,"Intel Labs / CMU"
-Kirk Rodrigues,"University of Toronto"
-K. V. Rashmi,"CMU"
-Sebastian Angel,"University of Pennsylvania"
-Ramnatthan Alagappan,"UIUC"
+David K. Gifford,MIT
+Rachit Agarwal,Cornell
+Yang Wang,Ohio State University
+David G. Andersen,CMU
+Adam Belay,MIT
+Asaf Cidon,Columbia
+Bryan Parno,CMU
+Michael Kaminsky,Intel Labs / CMU
+Kirk Rodrigues,University of Toronto
+K. V. Rashmi,CMU
+Sebastian Angel,University of Pennsylvania
+Ramnatthan Alagappan,UIUC
 Srinath T. V. Setty,"Microsoft Research, Redmond"
 Jacob R. Lorch,"Microsoft Research, Redmond"
 Michael D. Schroeder,"Microsoft Research, Silicon Valley"
-Joseph Gonzalez 0001,"University of California at Berkeley"
+Joseph Gonzalez,University of California at Berkeley
 Jay Lepreau,"University of Utah, Salt Lake City"
 Raluca A. Popa,"University of California, Berkeley"
-Mosharaf Chowdhury,"University of Michigan"
-Michael Walfish,"NYU"
-Emin Gün Sirer,"Cornell"
-Kai Li 0001,"Princeton"
-Shivaram Venkataraman,"UW Madison"
-Antony I. T. Rowstron,"MSR Cambridge"
-Mendel Rosenblum,"Stanford"
+Mosharaf Chowdhury,University of Michigan
+Michael Walfish,NYU
+Emin Gün Sirer,Cornell
+Kai Li,Princeton
+Shivaram Venkataraman,UW Madison
+Antony I. T. Rowstron,MSR Cambridge
+Mendel Rosenblum,Stanford
 Butler W. Lampson,"Microsoft Research, New England"
-Zhihao Jia,"CMU"
-Sanjay Ghemawat,"Google"
-Allen Clement,"Google"
-David A. Patterson 0001,"University of California at Berkeley"
-Yu Luo 0006,"University of Toronto"
+Zhihao Jia,CMU
+Sanjay Ghemawat,Google
+Allen Clement,Google
+David A. Patterson,University of California at Berkeley
+Yu Luo,University of Toronto
