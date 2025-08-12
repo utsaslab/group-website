@@ -56,7 +56,10 @@ def count_recent_publications(rows):
     """Count SOSP/OSDI publications in the last five years for each author."""
     current_year = datetime.date.today().year
     years = range(current_year - 4, current_year + 1)
-    author_name_set = {r["name"].strip() for r in rows}
+    # Use sanitized author names for matching so that names like
+    # "Jane Doe 0001" from DBLP match the sanitized entries
+    # produced when parsing ``hof-raw.tsv``.
+    author_name_set = {sanitize_name(r["name"].strip()) for r in rows}
     counts = defaultdict(int)
 
     for venue in VENUES:
@@ -77,6 +80,10 @@ def count_recent_publications(rows):
                 if isinstance(authors, dict):
                     authors = [authors]
                 for author in authors:
+                    # DBLP often appends numerical disambiguators to
+                    # author names (e.g., "Jane Doe 0001").  We strip
+                    # those here so the comparison with our sanitized
+                    # names succeeds.
                     name = sanitize_name(author.get("text", "").strip())
                     if name in author_name_set:
                         counts[name] += 1
@@ -93,8 +100,9 @@ def main() -> None:
     rows = parse_rows(INPUT_FILE)
     recent_counts = count_recent_publications(rows)
     for row in rows:
-        row["last"] = row["name"].split()[-1] if row["name"] else ""
-        row["lastfive"] = recent_counts.get(row["name"], 0)
+        sanitized = sanitize_name(row["name"])
+        row["last"] = sanitized.split()[-1] if sanitized else ""
+        row["lastfive"] = recent_counts.get(sanitized, 0)
 
     rows.sort(key=lambda r: r["freq"], reverse=True)
 
