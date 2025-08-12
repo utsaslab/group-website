@@ -19,7 +19,7 @@ years: [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]
 {% assign preprints = preprints | strip %}
 {% if preprints contains 'publication-entry' %}
 <details class="jumbotron">
-<summary><h3 style="font-size: 1.2rem;">Preprints</h3></summary>
+<summary style="font-size: 1.2rem; font-weight: bold;">Preprints</summary>
 {{ preprints }}
 </details>
 {% endif %}
@@ -28,7 +28,7 @@ years: [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]
 {% assign conf = conf | strip %}
 {% unless conf == "" %}
 <details class="jumbotron">
-<summary><h3 style="font-size: 1.2rem;">Refereed conference proceedings</h3></summary>
+<summary style="font-size: 1.2rem; font-weight: bold;">Refereed conference proceedings</summary>
 {{ conf }}
 </details>
 {% endunless %}
@@ -37,7 +37,7 @@ years: [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]
 {% assign journal = journal | strip %}
 {% unless journal == "" %}
 <details class="jumbotron">
-<summary><h3 style="font-size: 1.2rem;">Refereed journal articles</h3></summary>
+<summary style="font-size: 1.2rem; font-weight: bold;">Refereed journal articles</summary>
 {{ journal }}
 </details>
 {% endunless %}
@@ -46,7 +46,7 @@ years: [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]
 {% assign workshop = workshop | strip %}
 {% unless workshop == "" %}
 <details class="jumbotron">
-<summary><h3 style="font-size: 1.2rem;">Workshop papers</h3></summary>
+<summary style="font-size: 1.2rem; font-weight: bold;">Workshop papers</summary>
 {{ workshop }}
 </details>
 {% endunless %}
