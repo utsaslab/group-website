@@ -51,7 +51,7 @@ def main() -> None:
     entries = _load_entries(data_path)
 
     current_year = _dt.date.today().year
-    cutoff = current_year - 2
+    cutoff = current_year - 4
 
     recent = [
         item.get("name")
