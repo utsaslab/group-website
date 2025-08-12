@@ -1,7 +1,7 @@
 - name: Hayley LeBlanc
   photo: hayley.jpg
   duration: PhD
-  info: Microsoft Research
+  info: Microsoft Research, Redmond
   website: https://www.microsoft.com/en-us/research/people/hleblanc/
 
 - name: Se Kwon Lee
@@ -19,7 +19,7 @@
 - name: Aashaka Shah
   photo: aashaka.png
   duration: PhD
-  info: Microsoft Research Redmond
+  info: Microsoft Research, Redmond
   website: https://aashaka.github.io
 
 - name: Rohan Kadekodi
@@ -43,7 +43,7 @@
 - name: Jayashree Mohan
   photo: jayashree.jpg
   duration: PhD
-  info: Microsoft Research India
+  info: Microsoft Research, India
   website: https://www.microsoft.com/en-us/research/people/jamohan/
 
 - name: Yige Hu
