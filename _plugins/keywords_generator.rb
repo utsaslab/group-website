@@ -35,6 +35,7 @@ module Jekyll
         pub_hash['pdf'] = entry.pdf.to_s if entry.respond_to?(:pdf) && entry.pdf
         pub_hash['doi'] = entry.doi.to_s if entry.respond_to?(:doi) && entry.doi
         pub_hash['slides'] = entry.slides.to_s if entry.respond_to?(:slides) && entry.slides
+        pub_hash['software'] = entry.software.to_s if entry.respond_to?(:software) && entry.software
         pub_hash['video'] = entry.video.to_s if entry.respond_to?(:video) && entry.video
         pub_hash['audio'] = entry.audio.to_s if entry.respond_to?(:audio) && entry.audio
         pub_hash['abstract'] = entry.abstract.to_s if entry.respond_to?(:abstract) && entry.abstract

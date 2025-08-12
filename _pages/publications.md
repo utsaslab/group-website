@@ -31,6 +31,10 @@ permalink: /publications/
     <td style="text-align: right;">Presentation slides</td>
   </tr>
   <tr>
+    <td><button class="btn btn-code btm-sm">CODE</button></td>
+    <td style="text-align: right;">GitHub repository</td>
+  </tr>
+  <tr>
     <td><button class="btn btn-media btm-sm">VIDEO</button></td>
     <td style="text-align: right;">Recorded presentation or related video</td>
   </tr>

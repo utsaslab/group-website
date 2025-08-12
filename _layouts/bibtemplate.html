@@ -116,6 +116,10 @@ pre{
 <button class="btn btn-warning btm-sm"  onclick="toggleAbstract('{{entry.key}}{{ id_suffix }}')">ABSTRACT</button>
 {% endif %}
 
+{% if entry.software %}
+  <a href="{{ entry.software | unescape_tilde }}" target="_blank"><button class="btn btn-code btm-sm">CODE</button></a>
+{% endif %}
+
 {% if entry.abstract %}
 <div id="a{{entry.key}}{{ id_suffix }}" style="display: none; background-color:black; border-radius:5px; padding:10px; margin-bottom:20px;">
 <pre>{{ entry.bibtex | unescape_tilde | remove: "entry.abstract" }}</pre>
