@@ -4,6 +4,7 @@
 import csv
 import datetime
 import json
+import re
 import time
 from collections import defaultdict
 from pathlib import Path
@@ -27,7 +28,7 @@ def parse_rows(path: Path):
         for raw in reader:
             # Normalize column names by stripping leading question marks
             record = {k.lstrip("?"): v for k, v in raw.items()}
-            name = record.get("name", "").strip("\"")
+            name = sanitize_name(record.get("name", "").strip("\""))
             affiliation = record.get("affiliation", "").strip("\"")
             freq = int(record.get("freq", 0))
             dblp = record.get("dblp", "").strip("<>")
@@ -42,6 +43,13 @@ def parse_rows(path: Path):
                 }
             )
     return rows
+
+
+def sanitize_name(name: str) -> str:
+    """Remove trailing numbers and '(disambiguation)' from a name."""
+    name = re.sub(r"\s+\(disambiguation\)$", "", name, flags=re.IGNORECASE)
+    name = re.sub(r"\s+\d+$", "", name)
+    return name
 
 
 def count_recent_publications(rows):
@@ -69,7 +77,7 @@ def count_recent_publications(rows):
                 if isinstance(authors, dict):
                     authors = [authors]
                 for author in authors:
-                    name = author.get("text", "").strip()
+                    name = sanitize_name(author.get("text", "").strip())
                     if name in author_name_set:
                         counts[name] += 1
 
