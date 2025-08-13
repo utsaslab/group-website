@@ -9,7 +9,7 @@ module Jekyll
       service_file = File.join(site.source, '_data', 'service.yml')
       return unless File.exist?(service_file)
 
-      service_data = YAML.load_file(service_file)
+      service_data = YAML.safe_load(File.read(service_file))
       current_service = []
       upcoming_service = []
       all_service = {}
