@@ -15,12 +15,13 @@ years: [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]
 }
 </style>
 
+<div markdown="0">
 {% capture preprints %}{% bibliography --template bibtemplate --query @unpublished %}{% endcapture %}
 {% assign preprints = preprints | strip %}
 {% if preprints contains 'publication-entry' %}
 
 <details class="jumbotron">
-<summary><h3 style="font-size: 1.2rem; font-weight: bold; margin: 0;">Preprints</h3></summary>
+<summary style="font-size: 1.2rem; font-weight: 600;">Preprints</summary>
 {{ preprints }}
 </details>
 
@@ -31,7 +32,7 @@ years: [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]
 {% unless conf == "" %}
 
 <details class="jumbotron">
-<summary><h3 style="font-size: 1.2rem; font-weight: bold; margin: 0;">Refereed conference proceedings</h3></summary>
+<summary style="font-size: 1.2rem; font-weight: 600;">Refereed conference proceedings</summary>
 {{ conf }}
 </details>
 
@@ -42,7 +43,7 @@ years: [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]
 {% unless journal == "" %}
 
 <details class="jumbotron">
-<summary><h3 style="font-size: 1.2rem; font-weight: bold; margin: 0;">Refereed journal articles</h3></summary>
+<summary style="font-size: 1.2rem; font-weight: 600;">Refereed journal articles</summary>
 {{ journal }}
 </details>
 
@@ -53,8 +54,9 @@ years: [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]
 {% unless workshop == "" %}
 
 <details class="jumbotron">
-<summary><h3 style="font-size: 1.2rem; font-weight: bold; margin: 0;">Workshop papers</h3></summary>
+<summary style="font-size: 1.2rem; font-weight: 600;">Workshop papers</summary>
 {{ workshop }}
 </details>
 
 {% endunless %}
+</div>
