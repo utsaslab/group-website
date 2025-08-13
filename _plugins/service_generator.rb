@@ -10,8 +10,8 @@ module Jekyll
       return unless File.exist?(service_file)
 
       service_data = YAML.safe_load(File.read(service_file))
-      current_service = []
-      upcoming_service = []
+      current_service = {}
+      upcoming_service = {}
       all_service = {}
 
       today = Date.today
@@ -20,30 +20,40 @@ module Jekyll
       service_data.each do |service|
         start_date_str = service['Start Date']
         end_date_str = service['End Date']
+        role = service['Role']
 
         start_date = Date.parse(start_date_str)
         end_date = end_date_str ? Date.parse(end_date_str) : nil
 
         # Current Service
         if end_date.nil? || (start_date <= today && end_date >= today)
-          current_service << service
+          current_service[role] ||= []
+          current_service[role] << service
         end
 
         # Upcoming Service
         if start_date > today && start_date <= three_months_later
-          upcoming_service << service
+          upcoming_service[role] ||= []
+          upcoming_service[role] << service
         end
 
         # All Service
         year = start_date.year
         all_service[year] ||= {}
-        all_service[year][service['Role']] ||= []
-        all_service[year][service['Role']] << service
+        all_service[year][role] ||= []
+        all_service[year][role] << service
       end
 
-      # Sort current and upcoming services by start date
-      current_service.sort_by! { |s| Date.parse(s['Start Date']) }
-      upcoming_service.sort_by! { |s| Date.parse(s['Start Date']) }
+      # Sort current and upcoming services
+      current_service.each do |role, services|
+        services.sort_by! { |s| Date.parse(s['Start Date']) }
+      end
+      current_service = current_service.sort.to_h
+
+      upcoming_service.each do |role, services|
+        services.sort_by! { |s| Date.parse(s['Start Date']) }
+      end
+      upcoming_service = upcoming_service.sort.to_h
 
       # Sort all_service by year descending
       all_service = all_service.sort.reverse.to_h
