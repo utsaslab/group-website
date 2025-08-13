@@ -15,6 +15,7 @@ years: [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]
 }
 </style>
 
+<div markdown="0">
 {% capture preprints %}{% bibliography --template bibtemplate --query @unpublished %}{% endcapture %}
 {% assign preprints = preprints | strip %}
 {% if preprints contains 'publication-entry' %}
@@ -58,3 +59,4 @@ years: [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]
 </details>
 
 {% endunless %}
+</div>
