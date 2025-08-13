@@ -35,12 +35,10 @@ permalink: /service/
     {% for role_data in site.data.current_service %}
       {% assign role = role_data[0] %}
       {% assign services = role_data[1] %}
-      <h4 style="font-size: 1.0rem; font-weight: 600; margin-left: 20px;">{{ role }}</h4>
-      {% for service in services %}
-        <div class="service-item" style="margin-left: 40px;">
-          <div class="service-content">{% include service_entry.html service=service %}</div>
-        </div>
-      {% endfor %}
+      {% assign organizations = services | map: "Organization" | join: ", " %}
+      <div class="service-item" style="margin-left: 20px;">
+        <strong>{{ role }}:</strong> {{ organizations }}
+      </div>
     {% endfor %}
   </div>
 </details>
@@ -54,12 +52,10 @@ permalink: /service/
     {% for role_data in site.data.upcoming_service %}
       {% assign role = role_data[0] %}
       {% assign services = role_data[1] %}
-      <h4 style="font-size: 1.0rem; font-weight: 600; margin-left: 20px;">{{ role }}</h4>
-      {% for service in services %}
-        <div class="service-item" style="margin-left: 40px;">
-          <div class="service-content">{% include service_entry.html service=service %}</div>
-        </div>
-      {% endfor %}
+      {% assign organizations = services | map: "Organization" | join: ", " %}
+      <div class="service-item" style="margin-left: 20px;">
+        <strong>{{ role }}:</strong> {{ organizations }}
+      </div>
     {% endfor %}
   </div>
 </details>
@@ -77,12 +73,10 @@ permalink: /service/
       {% for role_data in roles %}
         {% assign role = role_data[0] %}
         {% assign services = role_data[1] %}
-        <h4 style="font-size: 1.0rem; font-weight: 600; margin-left: 20px;">{{ role }}</h4>
-        {% for service in services %}
-          <div class="service-item" style="margin-left: 40px;">
-            <div class="service-content">{% include service_entry.html service=service %}</div>
-          </div>
-        {% endfor %}
+        {% assign organizations = services | map: "Organization" | join: ", " %}
+        <div class="service-item" style="margin-left: 20px;">
+          <strong>{{ role }}:</strong> {{ organizations }}
+        </div>
       {% endfor %}
     {% endfor %}
   </div>
