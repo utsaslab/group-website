@@ -37,7 +37,7 @@ permalink: /service/
       {% assign services = role_data[1] %}
       {% assign organizations = services | map: "Organization" | join: ", " %}
       <div class="service-item" style="margin-left: 20px;">
-        <strong>{{ role }}:</strong> {{ organizations }}
+        <strong>{{ role }}:</strong>&nbsp;{{ organizations }}
       </div>
     {% endfor %}
   </div>
@@ -54,7 +54,7 @@ permalink: /service/
       {% assign services = role_data[1] %}
       {% assign organizations = services | map: "Organization" | join: ", " %}
       <div class="service-item" style="margin-left: 20px;">
-        <strong>{{ role }}:</strong> {{ organizations }}
+        <strong>{{ role }}:</strong>&nbsp;{{ organizations }}
       </div>
     {% endfor %}
   </div>
@@ -75,7 +75,7 @@ permalink: /service/
         {% assign services = role_data[1] %}
         {% assign organizations = services | map: "Organization" | join: ", " %}
         <div class="service-item" style="margin-left: 20px;">
-          <strong>{{ role }}:</strong> {{ organizations }}
+          <strong>{{ role }}:</strong>&nbsp;{{ organizations }}
         </div>
       {% endfor %}
     {% endfor %}
