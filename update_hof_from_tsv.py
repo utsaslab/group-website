@@ -28,14 +28,19 @@ def parse_rows(path: Path):
         for raw in reader:
             # Normalize column names by stripping leading question marks
             record = {k.lstrip("?"): v for k, v in raw.items()}
-            name = sanitize_name(record.get("name", "").strip("\""))
+            raw_name = record.get("name", "").strip("\"")
             affiliation = record.get("affiliation", "").strip("\"")
             freq = int(record.get("freq", 0))
             dblp = record.get("dblp", "").strip("<>")
             orcid = record.get("orcid", "").strip("<>")
             rows.append(
                 {
-                    "name": name,
+                    # Preserve the author's name as provided so middle
+                    # initials remain in the generated CSV, but also
+                    # keep a sanitized version for internal
+                    # comparisons against DBLP records.
+                    "name": raw_name,
+                    "sanitized": sanitize_name(raw_name),
                     "affiliation": affiliation,
                     "freq": freq,
                     "dblp": dblp,
@@ -46,10 +51,25 @@ def parse_rows(path: Path):
 
 
 def sanitize_name(name: str) -> str:
-    """Remove trailing numbers and '(disambiguation)' from a name."""
+    """Normalize author names for comparison.
+
+    In addition to stripping trailing DBLP disambiguation markers and
+    numbers, some author entries include middle initials (e.g., "Remzi
+    H. Arpaci-Dusseau").  DBLP is inconsistent about whether those
+    initials are present, which can lead to mismatched publication
+    counts.  To avoid this, drop any middle-name tokens that are a
+    single letter (with or without a trailing period).
+    """
+
+    # Remove trailing "(disambiguation)" and numeric suffixes such as
+    # "John Smith 0001" which DBLP uses for disambiguation.
     name = re.sub(r"\s+\(disambiguation\)$", "", name, flags=re.IGNORECASE)
     name = re.sub(r"\s+\d+$", "", name)
-    return name
+
+    # Remove middle initials like "H." or "C" that can appear or
+    # disappear across different records.
+    parts = [p for p in name.split() if len(p.rstrip(".")) > 1]
+    return " ".join(parts)
 
 
 def count_recent_publications(rows):
@@ -57,9 +77,9 @@ def count_recent_publications(rows):
     current_year = datetime.date.today().year
     years = range(current_year - 4, current_year + 1)
     # Use sanitized author names for matching so that names like
-    # "Jane Doe 0001" from DBLP match the sanitized entries
-    # produced when parsing ``hof-raw.tsv``.
-    author_name_set = {sanitize_name(r["name"].strip()) for r in rows}
+    # "Jane Doe 0001" from DBLP match the sanitized entries produced
+    # when parsing ``hof-raw.tsv``.
+    author_name_set = {r["sanitized"] for r in rows}
     counts = defaultdict(int)
 
     for venue in VENUES:
@@ -100,9 +120,13 @@ def main() -> None:
     rows = parse_rows(INPUT_FILE)
     recent_counts = count_recent_publications(rows)
     for row in rows:
-        sanitized = sanitize_name(row["name"])
+        sanitized = row["sanitized"]
         row["last"] = sanitized.split()[-1] if sanitized else ""
         row["lastfive"] = recent_counts.get(sanitized, 0)
+        # ``sanitized`` is only needed for internal processing; drop it
+        # so the CSV output retains the original author name with any
+        # middle initials intact.
+        del row["sanitized"]
 
     rows.sort(key=lambda r: r["freq"], reverse=True)
 
