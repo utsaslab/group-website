@@ -62,7 +62,7 @@ permalink: /service/
 <!-- Upcoming Service -->
 {% if site.data.upcoming_service.size > 0 %}
 <details class="jumbotron" open>
-  <summary style="font-size: 1.2rem; font-weight: 600;">Upcoming Service (in next 3 months)</summary>
+  <summary style="font-size: 1.2rem; font-weight: 600;">Upcoming Service</summary>
   <div class="year-list">
     {% for role_data in site.data.upcoming_service %}
       {% assign role = role_data[0] %}
@@ -104,7 +104,7 @@ permalink: /service/
           <strong>{{ role }}:</strong>
           <div class="service-orgs">
             {% for service in services %}
-              {% assign year_to_remove = service['Start Date'] | date: '%Y' %}
+              {% assign year_to_remove = year %}
               {% assign org_name = service.Organization | remove: year_to_remove | strip %}
               <span style="white-space: nowrap;">
               {% if service.Website %}<a href="{{ service.Website }}">{{ org_name }}</a>{% else %}{{ org_name }}{% endif %}

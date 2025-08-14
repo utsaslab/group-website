@@ -15,7 +15,6 @@ module Jekyll
       all_service = {}
 
       today = Date.today
-      three_months_later = Date.today >> 3
 
       service_data.each do |service|
         start_date_str = service['Start Date']
@@ -32,13 +31,17 @@ module Jekyll
         end
 
         # Upcoming Service
-        if start_date > today && start_date <= three_months_later
+        if start_date > today
           upcoming_service[role] ||= []
           upcoming_service[role] << service
         end
 
         # All Service
-        year = start_date.year
+        if end_date && end_date.year > start_date.year
+          year = end_date.year
+        else
+          year = start_date.year
+        end
         all_service[year] ||= {}
         all_service[year][role] ||= []
         all_service[year][role] << service
