@@ -17,6 +17,9 @@ permalink: /service/
   align-items: flex-start;
   margin-bottom: 1rem;
 }
+.service-orgs {
+  margin-left: 5px;
+}
 .service-number {
   padding-right: 10px;
 }
@@ -36,17 +39,20 @@ permalink: /service/
       {% assign role = role_data[0] %}
       {% assign services = role_data[1] %}
       <div class="service-item" style="margin-left: 20px;">
-        <strong>{{ role }}:</strong>&nbsp;{% for service in services %}
-          {% assign year = service['Start Date'] | date: '%Y' %}
-          {% assign org_name = service.Organization | remove: year | strip %}
-          <span style="white-space: nowrap;">
-          {% if service.Website %}<a href="{{ service.Website }}">{{ org_name }}</a>{% else %}{{ org_name }}{% endif %}
-          </span>
-          {%- unless forloop.last -%}
-            ,&nbsp;
-            {% if org_name contains ' ' %}<br>{% endif %}
-          {%- endunless -%}
-        {% endfor %}
+        <strong>{{ role }}:</strong>
+        <div class="service-orgs">
+          {% for service in services %}
+            {% assign year = service['Start Date'] | date: '%Y' %}
+            {% assign org_name = service.Organization | remove: year | strip %}
+            <span style="white-space: nowrap;">
+            {% if service.Website %}<a href="{{ service.Website }}">{{ org_name }}</a>{% else %}{{ org_name }}{% endif %}
+            </span>
+            {%- unless forloop.last -%}
+              ,&nbsp;
+              {% if org_name contains ' ' %}<br>{% endif %}
+            {%- endunless -%}
+          {% endfor %}
+        </div>
       </div>
     {% endfor %}
   </div>
@@ -62,17 +68,20 @@ permalink: /service/
       {% assign role = role_data[0] %}
       {% assign services = role_data[1] %}
       <div class="service-item" style="margin-left: 20px;">
-        <strong>{{ role }}:</strong>&nbsp;{% for service in services %}
-          {% assign year = service['Start Date'] | date: '%Y' %}
-          {% assign org_name = service.Organization | remove: year | strip %}
-          <span style="white-space: nowrap;">
-          {% if service.Website %}<a href="{{ service.Website }}">{{ org_name }}</a>{% else %}{{ org_name }}{% endif %}
-          </span>
-          {%- unless forloop.last -%}
-            ,&nbsp;
-            {% if org_name contains ' ' %}<br>{% endif %}
-          {%- endunless -%}
-        {% endfor %}
+        <strong>{{ role }}:</strong>
+        <div class="service-orgs">
+          {% for service in services %}
+            {% assign year = service['Start Date'] | date: '%Y' %}
+            {% assign org_name = service.Organization | remove: year | strip %}
+            <span style="white-space: nowrap;">
+            {% if service.Website %}<a href="{{ service.Website }}">{{ org_name }}</a>{% else %}{{ org_name }}{% endif %}
+            </span>
+            {%- unless forloop.last -%}
+              ,&nbsp;
+              {% if org_name contains ' ' %}<br>{% endif %}
+            {%- endunless -%}
+          {% endfor %}
+        </div>
       </div>
     {% endfor %}
   </div>
@@ -92,17 +101,20 @@ permalink: /service/
         {% assign role = role_data[0] %}
         {% assign services = role_data[1] %}
         <div class="service-item" style="margin-left: 20px;">
-          <strong>{{ role }}:</strong>&nbsp;{% for service in services %}
-            {% assign year_to_remove = service['Start Date'] | date: '%Y' %}
-            {% assign org_name = service.Organization | remove: year_to_remove | strip %}
-            <span style="white-space: nowrap;">
-            {% if service.Website %}<a href="{{ service.Website }}">{{ org_name }}</a>{% else %}{{ org_name }}{% endif %}
-            </span>
-            {%- unless forloop.last -%}
-              ,&nbsp;
-              {% if org_name contains ' ' %}<br>{% endif %}
-            {%- endunless -%}
-          {% endfor %}
+          <strong>{{ role }}:</strong>
+          <div class="service-orgs">
+            {% for service in services %}
+              {% assign year_to_remove = service['Start Date'] | date: '%Y' %}
+              {% assign org_name = service.Organization | remove: year_to_remove | strip %}
+              <span style="white-space: nowrap;">
+              {% if service.Website %}<a href="{{ service.Website }}">{{ org_name }}</a>{% else %}{{ org_name }}{% endif %}
+              </span>
+              {%- unless forloop.last -%}
+                ,&nbsp;
+                {% if org_name contains ' ' %}<br>{% endif %}
+              {%- endunless -%}
+            {% endfor %}
+          </div>
         </div>
       {% endfor %}
     {% endfor %}
