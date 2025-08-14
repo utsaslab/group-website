@@ -39,10 +39,11 @@ permalink: /service/
         <strong>{{ role }}:</strong>&nbsp;{% for service in services %}
           {% assign year = service['Start Date'] | date: '%Y' %}
           {% assign org_name = service.Organization | remove: year | strip %}
-          {% if org_name contains ' ' and forloop.index > 1 %}<br>{% endif %}
-          <span style="white-space: nowrap;">
           {% if service.Website %}<a href="{{ service.Website }}">{{ org_name }}</a>{% else %}{{ org_name }}{% endif %}
-          </span>{% unless forloop.last %}, {% endunless %}
+          {%- unless forloop.last -%}
+            ,
+            {% if org_name contains ' ' %}<br>{% endif %}
+          {%- endunless -%}
         {% endfor %}
       </div>
     {% endfor %}
@@ -62,10 +63,11 @@ permalink: /service/
         <strong>{{ role }}:</strong>&nbsp;{% for service in services %}
           {% assign year = service['Start Date'] | date: '%Y' %}
           {% assign org_name = service.Organization | remove: year | strip %}
-          {% if org_name contains ' ' and forloop.index > 1 %}<br>{% endif %}
-          <span style="white-space: nowrap;">
           {% if service.Website %}<a href="{{ service.Website }}">{{ org_name }}</a>{% else %}{{ org_name }}{% endif %}
-          </span>{% unless forloop.last %}, {% endunless %}
+          {%- unless forloop.last -%}
+            ,
+            {% if org_name contains ' ' %}<br>{% endif %}
+          {%- endunless -%}
         {% endfor %}
       </div>
     {% endfor %}
@@ -89,10 +91,11 @@ permalink: /service/
           <strong>{{ role }}:</strong>&nbsp;{% for service in services %}
             {% assign year_to_remove = service['Start Date'] | date: '%Y' %}
             {% assign org_name = service.Organization | remove: year_to_remove | strip %}
-            {% if org_name contains ' ' and forloop.index > 1 %}<br>{% endif %}
-            <span style="white-space: nowrap;">
             {% if service.Website %}<a href="{{ service.Website }}">{{ org_name }}</a>{% else %}{{ org_name }}{% endif %}
-            </span>{% unless forloop.last %}, {% endunless %}
+            {%- unless forloop.last -%}
+              ,
+              {% if org_name contains ' ' %}<br>{% endif %}
+            {%- endunless -%}
           {% endfor %}
         </div>
       {% endfor %}
