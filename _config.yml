@@ -75,7 +75,7 @@ scholar:
   source: /assets/
   bibliography: ref.bib
   bibliography_template: bibtemplate
-  sort_by: year, volume, number
+  sort_by: year, month, volume, number
   order: descending
 
   replace_strings: true
