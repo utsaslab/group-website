@@ -35,9 +35,9 @@ permalink: /service/
     {% for role_data in site.data.current_service %}
       {% assign role = role_data[0] %}
       {% assign services = role_data[1] %}
-      {% assign organizations = services | map: "Organization" | join: ", " %}
       <div class="service-item" style="margin-left: 20px;">
-        <strong>{{ role }}:</strong>&nbsp;{{ organizations }}
+        <strong>{{ role }}:</strong>&nbsp;
+        {% for service in services %}{% if service.website %}<a href="{{ service.website }}">{{ service.Organization }}</a>{% else %}{{ service.Organization }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}
       </div>
     {% endfor %}
   </div>
@@ -52,9 +52,9 @@ permalink: /service/
     {% for role_data in site.data.upcoming_service %}
       {% assign role = role_data[0] %}
       {% assign services = role_data[1] %}
-      {% assign organizations = services | map: "Organization" | join: ", " %}
       <div class="service-item" style="margin-left: 20px;">
-        <strong>{{ role }}:</strong>&nbsp;{{ organizations }}
+        <strong>{{ role }}:</strong>&nbsp;
+        {% for service in services %}{% if service.website %}<a href="{{ service.website }}">{{ service.Organization }}</a>{% else %}{{ service.Organization }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}
       </div>
     {% endfor %}
   </div>
@@ -73,9 +73,9 @@ permalink: /service/
       {% for role_data in roles %}
         {% assign role = role_data[0] %}
         {% assign services = role_data[1] %}
-        {% assign organizations = services | map: "Organization" | join: ", " %}
         <div class="service-item" style="margin-left: 20px;">
-          <strong>{{ role }}:</strong>&nbsp;{{ organizations }}
+          <strong>{{ role }}:</strong>&nbsp;
+          {% for service in services %}{% if service.website %}<a href="{{ service.website }}">{{ service.Organization }}</a>{% else %}{{ service.Organization }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}
         </div>
       {% endfor %}
     {% endfor %}
