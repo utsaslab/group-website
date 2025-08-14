@@ -44,8 +44,7 @@ permalink: /service/
           </span>
           {%- unless forloop.last -%}
             ,&nbsp;
-            {% assign words = org_name | split: ' ' %}
-            {% if words.size > 1 %}<br>{% endif %}
+            {% if org_name contains ' ' %}<br>{% endif %}
           {%- endunless -%}
         {% endfor %}
       </div>
@@ -71,8 +70,7 @@ permalink: /service/
           </span>
           {%- unless forloop.last -%}
             ,&nbsp;
-            {% assign words = org_name | split: ' ' %}
-            {% if words.size > 1 %}<br>{% endif %}
+            {% if org_name contains ' ' %}<br>{% endif %}
           {%- endunless -%}
         {% endfor %}
       </div>
@@ -102,8 +100,7 @@ permalink: /service/
             </span>
             {%- unless forloop.last -%}
               ,&nbsp;
-              {% assign words = org_name | split: ' ' %}
-              {% if words.size > 1 %}<br>{% endif %}
+              {% if org_name contains ' ' %}<br>{% endif %}
             {%- endunless -%}
           {% endfor %}
         </div>
