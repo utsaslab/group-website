@@ -37,16 +37,31 @@ pre{
     {% for author in entry.author_array %}
       {% assign full_name = author.first | append: ' ' | append: author.last %}
       {% assign coauthor = site.data['co-authors'] | where: 'name', full_name | first %}
+      {% assign team_member = site.data.team_members | where: 'name', full_name | first %}
+      {% assign alumnus = site.data.alumni | where: 'name', full_name | first %}
+      {% assign pi = site.data.pi | where: 'name', full_name | first %}
       {% capture name_html %}
-        {% if full_name == 'Vijay Chidambaram' %}
+        {% if full_name == 'Vijay Chidambaram' or team_member or alumnus or pi %}
           <u>{{ author.first }} {{ author.last }}</u>
         {% else %}
           {{ author.first }} {{ author.last }}
         {% endif %}
       {% endcapture %}
       {% assign name_html = name_html | strip %}
-      {% if coauthor and coauthor.website %}
-        <a href="{{ coauthor.website }}">{{ name_html }}</a>{% unless forloop.last %}, {% endunless %}
+      {% assign website = nil %}
+      {% if full_name == 'Vijay Chidambaram' %}
+        {% assign website = 'http://cs.utexas.edu/~vijay/' %}
+      {% elsif coauthor and coauthor.website %}
+        {% assign website = coauthor.website %}
+      {% elsif team_member and team_member.website %}
+        {% assign website = team_member.website %}
+      {% elsif alumnus and alumnus.website %}
+        {% assign website = alumnus.website %}
+      {% elsif pi and pi.website %}
+        {% assign website = pi.website %}
+      {% endif %}
+      {% if website %}
+        <a href="{{ website }}">{{ name_html }}</a>{% unless forloop.last %}, {% endunless %}
       {% else %}
         {{ name_html }}{% unless forloop.last %}, {% endunless %}
       {% endif %}
