@@ -4,12 +4,12 @@ title: UT Systems and Storage Lab
 email: vijayc@utexas.edu
 description: Academic webpage of the UT Systems and Storage Lab
 baseurl: ""
-url: "https://www.cs.utexas.edu/~vijay/"
+url: "https://utsaslab.cs.utexas.edu/"
 
 # Google analytics ID: Uncomment and your own, if you like
 # google_analytics: XX
 # google_analytics_4: XXX
-google_tag_manager: G-BW8R17DGVR
+#google_tag_manager: G-BW8R17DGVR
 
 # Footer info
 affiliation: >
