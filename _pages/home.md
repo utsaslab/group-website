@@ -10,9 +10,7 @@ permalink: /
 We are the UT Systems and Storage Lab. We build the next
 generation of data systems with a focus on performance and
 reliability. We open-source our software and collaborate closely with
-industry. We are also part of the [UT Data
-Systems](https://ut-datasys.github.io/) group and the
-[LASR](https://www.cs.utexas.edu/lasr/) research group at UT Austin.
+industry.
 
 <div class="container">
 <div class="row">
