@@ -7,11 +7,11 @@ permalink: /
 
 ### Welcome!
 
-I lead the UT Systems and Storage Lab. My group builds the next
+We are the UT Systems and Storage Lab. We build the next
 generation of data systems with a focus on performance and
 reliability. We open-source our software and collaborate closely with
-industry. I am also part of the [UT Data
-Sytems](https://ut-datasys.github.io/) group and the
+industry. We are also part of the [UT Data
+Systems](https://ut-datasys.github.io/) group and the
 [LASR](https://www.cs.utexas.edu/lasr/) research group at UT Austin.
 
 <div class="container">

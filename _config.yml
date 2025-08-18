@@ -1,8 +1,8 @@
 # Site settings30
 
-title: Vijay Chidambaram
+title: UT Systems and Storage Lab
 email: vijayc@utexas.edu
-description: Academic webpage of Vijay Chidambaram
+description: Academic webpage of the UT Systems and Storage Lab
 baseurl: ""
 url: "https://www.cs.utexas.edu/~vijay/"
 
@@ -13,8 +13,8 @@ google_tag_manager: G-BW8R17DGVR
 
 # Footer info
 affiliation: >
-  Vijay Chidambaram<br/>
-  Associate Professor, Department of Computer Science<br/>
+  UT Systems and Storage Lab<br/>
+  Department of Computer Science<br/>
   The University of Texas at Austin
 
 location: >
@@ -23,22 +23,18 @@ location: >
   Austin, TX 78712
 
 contact: >
-  <a href="mailto:vijayc@utexas.edu" target="_blank"><i class="fa fa-envelope fa-1x"></i> Contact Vijay via email</a> <br/>
+  <a href="mailto:vijayc@utexas.edu" target="_blank"><i class="fa fa-envelope fa-1x"></i> Contact the lab via email</a> <br/>
   <a href="https://github.com/sbryngelson/academic-website-template"><i class="fa fa-github fa-1x"></i> Use this site as a template!</a>
 
 # Pages shown in navbar
 nav_pages:
   - name: about
   - name: publications
-  - name: service
 #  - name: talks
 #  - name: research
 #  - name: software
   - name: team
-  - name: teaching
-  - name: book
 #  - name: blogs
-  - name: hall-of-fame
 
 include:
   - .htaccess
