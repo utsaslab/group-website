@@ -9,5 +9,10 @@
   {% assign link = site.url | append: site.baseurl | append: '/papers/' | append: entry.file %}
 {% endif %}
 <li>
-  {{ award_name }} for <a href="{{ link }}" target="_blank">{{ entry.title | remove: open_brace | remove: close_brace }}</a>
+  {{ award_name }} for
+  {% if link %}
+    <a href="{{ link }}" target="_blank">{{ entry.title | remove: open_brace | remove: close_brace }}</a>
+  {% else %}
+    {{ entry.title | remove: open_brace | remove: close_brace }}
+  {% endif %}
 </li>

@@ -11,7 +11,7 @@ permalink: /awards/
 {% for award in site.data.awards %}
   {% if award.paper %}
     {% assign award_name = award.name %}
-    {% bibliography --template award --query @*[key={{ award.paper }}] %}
+    {% bibliography --template award --query "@*[key={{award.paper}}]" %}
   {% else %}
     <li>{{ award.name }}</li>
   {% endif %}
