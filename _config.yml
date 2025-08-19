@@ -28,6 +28,7 @@ contact: >
 # Pages shown in navbar
 nav_pages:
   - name: publications
+  - name: awards
 #  - name: talks
 #  - name: research
 #  - name: software
