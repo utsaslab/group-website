@@ -1,10 +1,13 @@
 - name: Best Paper Award at EuroSys 2023
+  paper: chipmunk-eurosys23
 - name: Best Paper Award at ATC 2018
+  paper: HuEtAl18-TxFS
 - name: Best Paper Award at FAST 2018
+  paper: AlagappanEtAl18-FAST
 - name: NSF CAREER Award 2018
 - name: Best Poster Award at ApSys 2017
+  paper: purohith17sqlite
 - name: Best Paper Award at FAST 2017
+  paper: PillaiEtAl17-CCFS
 - name: ACM SIGOPS Dennis M. Ritchie Dissertation Award 2016
-- name: Microsoft Research Graduate Fellowship 2014
-- name: University of Wisconsin-Madison Alumni Scholarship 2009
 

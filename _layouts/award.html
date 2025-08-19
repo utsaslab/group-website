@@ -1,0 +1,13 @@
+---
+---
+{% assign open_brace = '{' %}
+{% assign close_brace = '}' %}
+{% assign link = nil %}
+{% if entry.pdf %}
+  {% assign link = entry.pdf | unescape_tilde %}
+{% elsif entry.file %}
+  {% assign link = site.url | append: site.baseurl | append: '/papers/' | append: entry.file %}
+{% endif %}
+<li>
+  {{ award_name }} for <a href="{{ link }}" target="_blank">{{ entry.title | remove: open_brace | remove: close_brace }}</a>
+</li>
