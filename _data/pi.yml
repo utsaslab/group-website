@@ -2,15 +2,18 @@
   photo: headshot.jpg
   info: Associate Professor, Department of Computer Science, UT Austin
   email: vijayc@utexas.edu
-  github: https://github.com/vijay03
+  github: https://github.com/utsaslab
   twitter: vijay_ut
   scholar: https://scholar.google.com/citations?hl=en&user=sbbRtWwAAAAJ
   # Change the items in "education" you have (up to 6)
   education:
     [
       "Ph.D. Computer Science, University of Wisconsin-Madison",
-      "B.Tech. Computer Science",
+      "M.S Computer Science, University of Wisconsin-Madison",
+      "B.E Computer Science, College oF Engineering, Guindy",
     ]
 
   educationshort:
-    ["Ph.D. University of Wisconsin-Madison", "B.Tech. Computer Science"]
+    ["Ph.D. University of Wisconsin-Madison",
+    "M.S University of Wisconsin-Madison",
+    "B.E Computer Science, CEG"]
