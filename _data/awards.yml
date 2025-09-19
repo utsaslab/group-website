@@ -1,26 +1,26 @@
 - name: UT Austin Wesley W. Calhoun Jr. Endowed Scholarship (Shurang Wu)
   person: Shurang Wu
 
-- name: Distinguished Artifact Award at OSDI 2025
+- name: Distinguished Artifact Award at OSDI 2025 (PoWER)
   paper: hayley25power
   
-- name: Best Paper Award at EuroSys 2023
+- name: Best Paper Award at EuroSys 2023 (Chipmunk)
   paper: chipmunk-eurosys23
 
-- name: Best Paper Award at ATC 2018
+- name: Best Paper Award at ATC 2018 (TxFS)
   paper: HuEtAl18-TxFS
 
-- name: Best Paper Award at FAST 2018
+- name: Best Paper Award at FAST 2018 (Protocol Aware Recovery)
   paper: AlagappanEtAl18-FAST
 
-- name: Best Poster Award at ApSys 2017
+- name: Best Poster Award at ApSys 2017 (Energy usage in mobile systems)
   paper: mohan17energy
 
-- name: Best Paper Award at FAST 2017
+- name: Best Paper Award at FAST 2017 (CCFS)
   paper: PillaiEtAl17-CCFS
 
-- name: Microsoft Research PhD Fellowship 2021
+- name: Microsoft Research PhD Fellowship 2021 (Sekwon Lee)
   person: Sekwon Lee
 
-- name: Microsoft Research PhD Fellowship 2019
+- name: Microsoft Research PhD Fellowship 2019 (Jayashree Mohan)
   person: Jayashree Mohan
